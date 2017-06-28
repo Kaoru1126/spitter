@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: spitter_production
-  username: spitter
+  username: root
   password: <%= ENV['SPITTER_DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
