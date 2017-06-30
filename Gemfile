@@ -63,3 +63,12 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production do
   gem 'unicorn'
 end
+
+# 追加したgem
+
+gem 'devise'
+gem 'pry-rails'
+gem 'haml'
+gem 'erb2haml'
+gem "font-awesome-rails"
+
