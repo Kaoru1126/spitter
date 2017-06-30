@@ -1,14 +1,20 @@
 @import "./variables";
 
+h3 {
+  font-weight: bold;
+}
+
 .header__container {
   height: 46px;
   width: 100%;
+  position: fixed;
   background-color: gray;
 }
 
 .index {
   width: 100vw;
   height: 100vh;
+  padding-top: 56px;
   background-color: $indexBack;
 }
   .header__space {
@@ -19,7 +25,6 @@
 
 .header__items {
 }
-
 
 // .header__items-home
 // .header__items-moment
@@ -33,37 +38,108 @@
 // .index
 .index-container {
   margin: 0px 111px 0px 111px;
-  padding: 10px 14px 15px 14px;
+  padding: 0px 14px 15px 14px;
   background-color: $indexBack;
 }
 
 .index__left {
   display: inline-block;
+  float: left;
 }
 
-// .index__bio
-.index__bio__box {
+.index__bio {
   width: 288px;
   height: 207px;
+  margin-bottom: 10px;
+}
+
+.index__bio__box--top {
+  width: 288px;
+  height: 90px;
   background-color: gray;
+}
+
+.index__bio__box--bottom {
+  width: 288px;
+  height: 117px;
+  background-color: white;
 }
 
 // .index__bio__box--icon
 // .index__bio__box--name
 // .index__bio__box--stats
-// .index__trends-box
-.index__main { 
-  margin: 0px 10px 0px 0px;
+.index__trends-box {
+  width: 258px;
+  height: 470px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: solid 1px $indexBack;
+  background-color: white;
 }
-.index__main--timeline-tweetbox {
+
+
+.index__main { 
+  margin-left: 12px;
+  display: inline-block;
+  float: left;
+}
+
+.index__main--timeline__tweetbox {
   width: 588px;
   height: 58px;
-  background-color: red;
+  background-color: #FBEAEC;
 }
-// .index__main--stream--box
-// .index__main--stream-tweets
-// .index__right
-// .index__right__recomem
-// .index__right__import
-// .index__right__terms
-// .index__right__ads
+
+.index__main--stream__box {
+
+}
+
+.index__main--stream__tweets {
+  background-color: white;
+  width: 564px;
+  height: 130px;
+  padding: 9px 12px 9px 12px;
+  border-bottom: solid 1px gray;
+}
+
+.index__right {
+  display: inline-block;
+  float: left;
+  margin-left: 12px;
+  border-bottom: solid 1px $indexBack;
+}
+
+.index__right__recomem {
+    height: 226px;
+    width:  258px;
+    padding: 15px;
+    background-color: green;
+    border-bottom: solid 1px $indexBack;
+}
+
+
+.index__right__import {
+    height: 76px;
+    width: 258px;
+    padding: 15px;
+    background-color: green;
+    border-bottom: solid 1px $indexBack;
+  }
+
+.index__right__terms {
+  height: 90px;
+  width:  258px;
+  padding: 15px;
+  background-color: green;
+  border-bottom: solid 1px $indexBack;
+
+}
+
+.index__right__ads {
+  height: 20px;
+  width:  258px;
+  padding: 15px;
+  background-color: green;
+  border-bottom: solid 1px $indexBack;
+}
+
