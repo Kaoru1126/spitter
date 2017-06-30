@@ -7,8 +7,8 @@
 | name       | string      | null: false, index: true, unique: true |
 | mail       | string      | null: false, unique: true              |
 | password   | string      | null: false                            |
-| screenName | string      | null: false, unique: true              |
-| intro      | string      |                                        |
+| screenName | string      | null: false, unique: true, limit: 10   |
+| intro      | text        |                                        |
 | icon       | string      |                                        |
 | birthday   | string      |                                        |
 | place      | string      |                                        |
@@ -23,10 +23,10 @@
 
 | Column     | Type        | Options                        |
 |------------|-------------|--------------------------------|
-| content    | text        | null: false                    |
+| content    | text        | limit: 140                     |
 | image      | string      |                                |
 | user_id    | integer     | null: false, foreign_key: true |
-|            | integer     | null: false  foreign_key: true |
+
 
 ### Association
 

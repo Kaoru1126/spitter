@@ -8,7 +8,7 @@ h3 {
   height: 46px;
   width: 100%;
   position: fixed;
-  background-color: gray;
+  background-color: white;
 }
 
 .index {
@@ -33,7 +33,22 @@ h3 {
 // .header__items-bird
 // .header__items-serchbar
 // .header__items-bioicon
-// .header__items-tweetbox
+.header__items-tweetbox {
+  float: right;
+  border-radius: 100px;
+  width: 90px;
+  height: 34px;
+  background-color: $myGreen;
+  margin: 6px 0px 6px 16px;
+}
+p.nav__tbox {
+  font-size: 14px;
+  width: 56px;
+  height: 20px;
+  line-height: 20px;
+  margin: 6px 16px;
+  color: white;
+}
 
 // .index
 .index-container {
@@ -87,7 +102,7 @@ h3 {
 .index__main--timeline__tweetbox {
   width: 588px;
   height: 58px;
-  background-color: #FBEAEC;
+  background-color: $lightGreen;
 }
 
 .index__main--stream__box {
