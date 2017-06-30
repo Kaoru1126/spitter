@@ -1,0 +1,69 @@
+@import "./variables";
+
+.header__container {
+  height: 46px;
+  width: 100%;
+  background-color: gray;
+}
+
+.index {
+  width: 100vw;
+  height: 100vh;
+  background-color: $indexBack;
+}
+  .header__space {
+  color: green;
+  max-width: 1190px;
+  margin: 0 auto;
+}
+
+.header__items {
+}
+
+
+// .header__items-home
+// .header__items-moment
+// .header__items-notification
+// .header__items-messages
+// .header__items-bird
+// .header__items-serchbar
+// .header__items-bioicon
+// .header__items-tweetbox
+
+// .index
+.index-container {
+  margin: 0px 111px 0px 111px;
+  padding: 10px 14px 15px 14px;
+  background-color: $indexBack;
+}
+
+.index__left {
+  display: inline-block;
+}
+
+// .index__bio
+.index__bio__box {
+  width: 288px;
+  height: 207px;
+  background-color: gray;
+}
+
+// .index__bio__box--icon
+// .index__bio__box--name
+// .index__bio__box--stats
+// .index__trends-box
+.index__main { 
+  margin: 0px 10px 0px 0px;
+}
+.index__main--timeline-tweetbox {
+  width: 588px;
+  height: 58px;
+  background-color: red;
+}
+// .index__main--stream--box
+// .index__main--stream-tweets
+// .index__right
+// .index__right__recomem
+// .index__right__import
+// .index__right__terms
+// .index__right__ads
