@@ -1,14 +1,10 @@
 .header__container
-  .header__space
-    .header__items
-      .header__items-home
-      .header__items-moment
-      .header__items-notification
-      .header__items-messages
-      .header__items-bird
-      .header__items-serchbar
-      .header__items-bioicon
-      .header__items-tweetbox
+  = render 'layouts/navBar'
+.largepic-container
+  .largepic-area
+  .statsbar-area
+    .statsbar-area__container
+      .statsbar__area__block
 .index
   .index-container
     .index__left
@@ -19,14 +15,14 @@
           .index__bio__box--name
           .index__bio__box--stats
       .index__trends-box
-        %h3 show
-    .index__main
-      .index__main--timeline__tweetbox
-      .index__main--stream__box
-        .index__main--stream__tweets
+        %h3 プロフィール
+    .user__main
+      .user__main--timeline__tweetbox
+        .tweetBox
+          %ul
+            %li.tweet
+              = link_to "ツイート", user_path(current_user.id)
+      .user__main--stream__box
+        .user__main--stream__tweets
     .index__right
-      .index__right__recomem 
-        %h3 show
-      .index__right__import
-      .index__right__terms
-      .index__right__ads
+      = render 'layouts/indexRight'

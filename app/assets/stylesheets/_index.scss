@@ -1,4 +1,4 @@
-@import "./variables";
+// @import "./variables";
 
 h3 {
   font-weight: bold;
@@ -52,7 +52,7 @@ p.nav__tbox {
 
 // .index
 .index-container {
-  margin: 0px 111px 0px 111px;
+  margin: 0px 109px 0px 109px;
   padding: 0px 14px 15px 14px;
   background-color: $indexBack;
 }
@@ -81,7 +81,32 @@ p.nav__tbox {
 }
 
 // .index__bio__box--icon
-// .index__bio__box--name
+
+.index__bio__box {
+  width: 185px;
+  height: 43px;
+  margin-bottom: 10px;
+}
+
+.index__bio__box--iconBox {
+  float: left;
+  width: 60px;
+  height: 60px;
+  border: solid 1px black;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.index__bio__box--name {
+  font-size: 18px;
+  font-weight: bold;
+  // margin-left: 30px;
+  line-height: 43px;
+  float: right;
+}
+
+
 // .index__bio__box--stats
 .index__trends-box {
   width: 258px;
@@ -93,8 +118,8 @@ p.nav__tbox {
 }
 
 
-.index__main { 
-  margin-left: 12px;
+.index__main {
+  margin-left: 8px;
   display: inline-block;
   float: left;
 }
@@ -103,6 +128,30 @@ p.nav__tbox {
   width: 588px;
   height: 58px;
   background-color: $lightGreen;
+  border: solid 1px $indexBack;
+  &__area {
+    width: 508px;
+    height: 38px;
+    padding: 10px 12px;
+  }
+  &__box{
+    width: 506px;
+    height: 36px;
+    border-radius: 30px;
+    background-color: white;
+    border: solid 1px $myGreen2;
+    margin-left: 56px;
+
+  }
+}
+
+p.tweetbox {
+  font-size: 14px;
+  color: $myGreen2;
+  width: 459px;
+  height: 20px;
+  line-height: 20px;
+  padding: 8px 31px 8px 16px;
 }
 
 .index__main--stream__box {
@@ -114,21 +163,20 @@ p.nav__tbox {
   width: 564px;
   height: 130px;
   padding: 9px 12px 9px 12px;
-  border-bottom: solid 1px gray;
+  border-bottom: solid 1px $indexBack;
 }
 
 .index__right {
   display: inline-block;
   float: left;
-  margin-left: 12px;
-  border-bottom: solid 1px $indexBack;
 }
 
 .index__right__recomem {
     height: 226px;
     width:  258px;
     padding: 15px;
-    background-color: green;
+    margin-left: 9px;
+    background-color: white;
     border-bottom: solid 1px $indexBack;
 }
 
@@ -137,7 +185,8 @@ p.nav__tbox {
     height: 76px;
     width: 258px;
     padding: 15px;
-    background-color: green;
+    margin-left: 9px;
+    background-color: white;
     border-bottom: solid 1px $indexBack;
   }
 
@@ -145,7 +194,8 @@ p.nav__tbox {
   height: 90px;
   width:  258px;
   padding: 15px;
-  background-color: green;
+  margin-left: 9px;
+  background-color: white;
   border-bottom: solid 1px $indexBack;
 
 }
@@ -154,7 +204,7 @@ p.nav__tbox {
   height: 20px;
   width:  258px;
   padding: 15px;
-  background-color: green;
+  margin-left: 9px;
+  background-color: white;
   border-bottom: solid 1px $indexBack;
 }
-
