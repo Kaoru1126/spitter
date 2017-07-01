@@ -1,0 +1,12 @@
+.index__left
+  .index__bio
+    .index__bio__box--top
+    .index__bio__box--bottom
+      .index__bio__box--icon
+      .index__bio__box
+        .index__bio__box--iconBox
+        .index__bio__box--name
+          = link_to current_user.name, user_path(current_user.id)
+      .index__bio__box--stats
+  .index__trends-box
+    %h3 トレンド

@@ -1,0 +1,29 @@
+.tweet-area
+  .tweet_box
+    = form_for @tweet do |f|
+      = f.label :text, "Tweet"
+      = f.text_field :content, :placeholer => "just give it a shot", :class => "new__tweetBox"
+      = f.submit "Tweet", :class => "new__tweetBtn"
+      = f.label :image, :class => "new__tweetImageLabel"
+      = f.file_field :image, :class => "new__tweetImageBtn"
+
+
+/ new_tweet_path
+
+/ キャリアウェゔの使い方
+/ view/formへの追加
+/ viewのformに以下を追加。
+
+/ form_for(@product) do |f|
+/   # ↓ 以下を追加
+/   = f.file_field :image
+/ end
+
+
+/ view表示側への追記
+/ アップロードした画像をviewで表示させる場合は以下を追記してください。
+/ # app/views/products/show.html.haml
+/ = image_tag @product.image_url(:thumb)
+/ 以下を追加して、テーブルを作成。
+
+/ bundle exce rake db:migrate
