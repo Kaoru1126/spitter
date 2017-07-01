@@ -1,0 +1,67 @@
+.largepic-container {
+  // positon: fixed;
+}
+
+.largepic-area {
+  width: 100vw;
+  height: 175px;
+  background-color: $myGreen;
+}
+
+.statsbar-area {
+  width: 100vw;
+  height: 60px;
+  background-color: white;
+}
+
+.statsbar-area__container {
+  margin: 0px 123.5px;
+}
+
+.statsbar__area__block {
+  width: 890px;
+  height: 59px;
+  padding: 0px 5px;
+  background-color: red;
+  margin-left: 290px;
+
+}
+
+.user__main{
+  margin-left: 8px;
+  display: inline-block;
+  float: left;
+}
+
+.user__main--timeline__tweetbox {
+  background-color: white;
+  width: 588px;
+  height: 45px;
+  border-bottom: solid 1px $indexBack;
+  display: inline-block;
+}
+
+.tweetBox{
+  font-weight: bold;
+  padding:15px 15px 12px 15px;
+  width: 72px;
+  height: 18px;
+  font-size: 18px
+}
+
+li.tweet{
+  line-height: 18px;
+}
+
+.user__main--stream__box{
+
+
+}
+
+.user__main--stream__tweets{
+  background-color: white;
+  width: 564px;
+  height: 130px;
+  padding: 9px 12px 9px 12px;
+  border-bottom: solid 1px $indexBack;
+}

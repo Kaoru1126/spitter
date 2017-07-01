@@ -1,0 +1,10 @@
+.alert {
+      color: white;
+      text-align: center;
+    &__alert-notice {
+      background-color: $myGreen;
+  }
+    &__alert-error {
+      background-color: $error;
+  }
+}
