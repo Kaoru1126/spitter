@@ -1,10 +1,12 @@
 class UsersController < ApplicationController
 
   def show
-    @myTweets = Tweet.find
+    # binding.pry
+    @myTweets = current_user.tweets.order("created_at DESC")
+    @myTweetCount = @myTweets.count
   end
 
-  # private 
+  # private
   # end
 
 end
