@@ -1,15 +1,23 @@
-p {
-  color: red;
-}
 
 .tweet-area {
-  width: 500px;
-  height: 500px;
-  background-color: $myGreen;
-  color: black;
+  width: 590px;
+  height: 210px;
 }
 
-.tweet_box {
-  width: 300px;
-  height: 300px;
+
+.tweet__box--top {
+  width: 590px;
+  height: 49px;
 }
+
+.tweet__box--title{
+  width: 424.5px;
+  height: 24px;
+  margin: 0 70.75px;
+}
+
+
+.tweet__box--bottom{
+  background-color: $myGreen;
+}
+
