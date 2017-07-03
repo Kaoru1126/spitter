@@ -5,6 +5,11 @@
   .statsbar-area
     .statsbar-area__container
       .statsbar__area__block
+        .numOfTweet
+          %span.numberOfTweet ツイート
+          .itsNumber
+            = @myTweetCount
+        .numOfFollow
 .index
   .index-container
     .index__left
@@ -20,9 +25,19 @@
       .user__main--timeline__tweetbox
         .tweetBox
           %ul
-            %li.tweet
+            %li.tweetBtn
               = link_to "ツイート", user_path(current_user.id)
       .user__main--stream__box
-        .user__main--stream__tweets
+        - @myTweets.each do |tweet|
+          .user__main--stream__tweets
+            .userIcon
+            .nameTime__box
+              %li.userAndTime
+                = tweet.user.name + "・" +tweet.created_at.strftime("%Y年%m月%d日 %H時%M分")
+            %li.tweetContent
+              = tweet.content
+            %li.tweetImage
+              = image_tag tweet.image
+
     .index__right
       = render 'layouts/indexRight'

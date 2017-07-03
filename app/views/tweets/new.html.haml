@@ -1,11 +1,12 @@
 .tweet-area
-  .tweet_box
+  .tweet__box--top
     = form_for @tweet do |f|
       = f.label :text, "Tweet"
       = f.text_field :content, :placeholer => "just give it a shot", :class => "new__tweetBox"
       = f.submit "Tweet", :class => "new__tweetBtn"
       = f.label :image, :class => "new__tweetImageLabel"
       = f.file_field :image, :class => "new__tweetImageBtn"
+  .tweet__box--bottom
 
 
 / new_tweet_path
