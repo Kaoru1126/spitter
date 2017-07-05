@@ -1,0 +1,28 @@
+.header__container
+  .header__space
+    %ul.header
+      %li.header__list
+        = link_to root_path, class:"header__list__text" do
+          %i.fa.fa-home{"aria-hidden" => "true"} ホーム
+      %li.header__list
+        = link_to root_path, class:"header__list__text" do
+          %i.fa.fa-bolt{"aria-hidden" => "true"} モメント
+    .navBar__rightArea
+      .search
+        .navBar__search__area
+          = form_tag('/products/search', method: :get) do
+            %input.searchBar{:name => "keyword", :placeholder => "キーワード検索", :type => "text", :value => ""}/
+      %ul.navBar__actionBTN__area
+        = link_to "", user_path(current_user.id), :class=>"navBar__iconBTN"
+        .navBar__tweetBTN
+          = link_to "ツイート", new_tweet_path, :class=>"navBar__tweetBTN--text"
+
+
+
+
+
+/ <%= link_to new_customer_path(@loginUser), class:"btn btn-primary" do %>
+/  = link_to new_customer_path(@loginUser), class:"btn btn-primary" do
+/   <i class="fa fa-user-plus"> アカウント登録</i>
+/   %i.fa.fa-user-plus アカウント登録
+/ <% end %>

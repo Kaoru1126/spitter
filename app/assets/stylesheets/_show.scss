@@ -1,3 +1,4 @@
+
 .largepic-container {
   // positon: fixed;
 }
@@ -27,25 +28,69 @@
 }
 
 .numOfTweet{
+  text-align: center;
   width: 48px;
   height: 37px;
   padding: 14px 15px 7px 15px;
   border-bottom: 2px solid $myGreen;
+  .numberOfTweet{
+    font-size: 12px;
+    font-weight: bold;
+    vertical-align: top;
+    .itsNumber{
+      width: 48px;
+      height: 18px;
+      font-size: 200px;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
 }
 
-span.numberOfTweet{
-  font-size: 12px;
+
+
+
+
+.logoutBtn__area{
+  width: 130px;
+  height: 47px;
+  padding-top: 12px;
+  padding-left: 2px;
+  float: right;
+  .logoutBtn{
+    width: 96px;
+    height: 20px;
+    padding: 6px 16px;
+    border: solid 1px gray;
+    border-radius: 100px;
+    text-align: center;
+    .logoutBtn--text{
+      font-size: 14px;
+      line-height: 20px;
+      color: gray;
+    }
+  }
 }
 
-.itsNumber{
-  width: 48px;
-  height: 18px;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  padding-top: 3px;
+.editBtn__area{
+  width: 160px;
+  height: 47px;
+  padding-top: 12px;
+  padding-left: 2px;
+  float: right;
+  .editBtn{
+    width: 126px;
+    height: 20px;
+    padding: 6px 16px;
+    border: solid 1px gray;
+    border-radius: 100px;
+    .editBtn--text{
+      font-size: 14px;
+      line-height: 20px;
+      color: gray;
+    }
+  }
 }
-
 
 .user__main{
   margin-left: 8px;

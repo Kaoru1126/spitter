@@ -1,0 +1,87 @@
+.header__space {
+  height: 46px;
+  width: 100%;
+  background-color: white;
+  line-height: 46px;
+}
+
+.header {
+  margin: auto 0;
+  display: inline-block;
+  &__list {
+    font-size: 13px;
+    float: left;
+    height: 44px;
+    width: 75px;
+    margin: 0px 14px 0px 4px;
+    display: inline-block;
+    &__text {
+    color: gray;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    }
+  }
+}
+
+
+.search{
+  width: 236px;
+  height: 46px;
+  background-color: gray;
+  display: inline-block;
+}
+
+.searchBar{
+  width: 175px;
+  height: 14px;
+  padding: 8px 32px 8px 12px;
+  background-color: $searchBar;
+  border: solid 1px $searchBoarder;
+  border-radius: 100px;
+}
+
+.navBar__rightArea{
+  width: 374px;
+  height: 46px;
+  float: right;
+  line-height: 46px;
+  display: inline-block;
+  .navBar__actionBTN__area{
+    float: right;
+    width: 138px;
+    height: 46px;
+    background-color: gray;
+    .navBar__iconBTN {
+      display: inline-block;
+      margin-top: 7px;
+      margin-bottom: 7px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-image: url(/assets/pics/user-297d2bd2c2ed5cdc4c526a5f5c946899919e55b486143529ca0e20e061e0ba33.jpg);
+    }
+  }
+}
+
+.navBar__tweetBTN {
+  width: 138px;
+  height: 46px;
+  display: inline;
+}
+
+.navBar__tweetBTN--text{
+  float: right;
+  font-size: 14px;
+  border-radius: 100px;
+  width: 56px;
+  height: 20px;
+  margin: 7px 0px 7px 0px;
+  padding: 6px 16px;
+  background-color: $myGreen2;
+  display: inline-block;
+  line-height: 20px;
+}
+
+
+
