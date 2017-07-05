@@ -1,10 +1,17 @@
 .header__container
-  = render 'layouts/navBar'
+  = render 'layouts/loggedInNavBar'
 .largepic-container
   .largepic-area
   .statsbar-area
     .statsbar-area__container
       .statsbar__area__block
+        .editBtn__area
+          .editBtn
+            %p.editBtn--text プロフィールを編集
+        .logoutBtn__area
+          .logoutBtn
+            %p.logoutBtn--text
+              = link_to "ログアウト", destroy_user_session_path, method: :delete
         .numOfTweet
           %span.numberOfTweet ツイート
           .itsNumber
