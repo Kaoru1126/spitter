@@ -1,8 +1,5 @@
 class TweetsController < ApplicationController
   before_action :set_user, only: [:index]
-  def index
-
-  end
 
   def new
     @tweet = Tweet.new
@@ -12,12 +9,32 @@ class TweetsController < ApplicationController
     @tweet = Tweet.new(tweet_params)
     if @tweet.save
       flash[:notice] = 'ツイートしました'
-      redirect_to root_path 
+      redirect_to root_path
     else
       flash[:alert] = "ツイートに失敗しました"
       render :new
     end
+  end
 
+  def index
+    @followedUsers = Relation.where(user_id: current_user.id)
+    following_ids = []
+    following_ids << current_user.id
+    @followedUsers.each do |followed|
+      following_ids << followed.following_id
+    end
+    @recommends = User.where.not(id:following_ids).limit(3)
+  end
+
+  def moment
+    @moments = Tweet.order("created_at DESC")
+    @followedUsers = Relation.where(user_id: current_user.id)
+    following_ids = []
+    following_ids << current_user.id
+    @followedUsers.each do |followed|
+      following_ids << followed.following_id
+    end
+    @recommends = User.where.not(id:following_ids).limit(3)
   end
 
   private
