@@ -152,7 +152,6 @@ p.tweetbox {
 }
 
 .index__right {
-  display: inline-block;
   float: left;
 }
 
@@ -172,15 +171,76 @@ p.tweetbox {
   margin-bottom: 10px;
   font-size: 18px;
   font-weight: bold;
+}
+
+.recomem--field {
   display: inline-block;
+  line-height: 22px;
 }
 
 .small_box{
   width: 110px;
   height: 22px;
+  font-size: 10px;
+  float: right;
+  line-height: 2.5;
+}
+
+.recomendUsers--area{
+  width: 258px;
+  height: 52px;
+  padding-bottom: 8px;
+  border-bottom: solid 1px black;
+  background-color: white;
+}
+
+.recomendUsers--right{
+  width: 180px;
+  height: 48px;
+  margin: 0px 20px 0px 0px;
+  float: right;
+}
+
+
+.recomendUsers__name--area{
+  width: 180px;
+  height: 17px;
+}
+
+
+.recomendUsers__name{
+  font-size: 14px;
+}
+
+.recomendUsers__followBTN--area{
   font-size: 12px;
+  font-weight:bold;
+  color: $myGreen3;
+  width: 180px;
+  height: 27px;
+  margin-top: 4px;
+}
+
+.recomendUsers__followBTN{
+  width: 72px;
+  height: 21px;
+  line-height: 20px;
+  padding: 4px 12px;
+  border: solid 1px $myGreen3;
+  border-radius: 50px;
+}
+
+.recomendUsers--left{
+
+}
+
+
+.recomendUsers__iconPic--area{
+  width: 48px;
+  height: 48px;
+  border: 1px solid black;
+  border-radius: 50%;
   float: left;
-  display: inline-block;
 }
 
 .index__right__import {
