@@ -12,11 +12,21 @@
           .logoutBtn
             %p.logoutBtn--text
               = link_to "ログアウト", destroy_user_session_path, method: :delete
-        .numOfTweet
-          %span.numberOfTweet ツイート
+        .numOfTweet--area
+          .numOfTweet__text--area
+            %p.numOfTweet--text ツイート
           .itsNumber
             = @myTweetCount
-        .numOfFollow
+        .numOfTweet--area
+          .numOfTweet__text--area
+            %p.numOfTweet--text フォロー
+          .itsNumber
+            = @myFollowingsCount
+        .numOfTweet--area
+          .numOfTweet__text--area
+            %p.numOfTweet--text フォロワ
+          .itsNumber
+            = @myFollowersCount
 .index
   .index-container
     .index__left
@@ -31,9 +41,11 @@
     .user__main
       .user__main--timeline__tweetbox
         .tweetBox
-          %ul
-            %li.tweetBtn
-              = link_to "ツイート", user_path(current_user.id)
+          .tweetBtn
+            = link_to "ツイート", user_path(current_user.id)
+        .followingBox
+          .followingBtn
+            = link_to "フォロー", user_path(current_user.id)
       .user__main--stream__box
         - @myTweets.each do |tweet|
           .user__main--stream__tweets
