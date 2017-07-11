@@ -20,8 +20,7 @@
             = @myTweetCount
         .numOfTweet--area
           .numOfTweet__text--area
-            %p.numOfTweet--text
-              = link_to "フォロー", following_users_path
+            = link_to "フォロー", following_users_path
           .itsNumber
             = @myFollowingsCount
         .numOfTweet--area
@@ -40,25 +39,14 @@
           .index__bio__box--stats
       .index__trends-box
         %h3 プロフィール
-    .user__main
-      .user__main--timeline__tweetbox
-        .tweetBox
-          .tweetBtn
-            = link_to "ツイート", user_path(current_user.id)
-        .followingBox
-          .followingBtn
-            = link_to "フォロー", following_users_path
-      .user__main--stream__box
-        - @myTweets.each do |tweet|
-          .user__main--stream__tweets
-            .userIcon
-            .nameTime__box
-              %li.userAndTime
-                = tweet.user.name + "・" +tweet.created_at.strftime("%Y年%m月%d日 %H時%M分")
-            %li.tweetContent
-              = tweet.content
-            %li.tweetImage
-              = image_tag tweet.image
-
-    .index__right
-      = render 'layouts/indexRight'
+    .following__container
+      - @nameBox.each do |following|
+        .following__area
+          .following__cells
+            .following__cells__top
+            .following__cells__bottom
+              .following__cells__bottom--icon
+              .following__cells__bottom--btn フォロー中
+              .following__cells__bottom--name
+                = following.name
+              .following__cells__bottom--intro

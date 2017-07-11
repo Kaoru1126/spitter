@@ -8,7 +8,12 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :users, only: :show
-  resources :relations, only: [:index, :create, :destroy]
+  resources :users, only: [:show, ] do
+    collection do
+      get 'following'
+    end
+  end
 
+  resources :relations, only: [:index, :create, :destroy]
+  
 end
