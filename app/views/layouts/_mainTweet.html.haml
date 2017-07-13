@@ -1,0 +1,11 @@
+- @tweets.each do |tweet|
+  .moment__main--stream__tweets
+    %ul
+      %li.user
+        = tweet.user.name
+      %li.timestamp
+        = tweet.created_at.strftime("%Y/%m/%d %H:%M:%S")
+      %li.textinchat
+        = tweet.content
+      %li.imageinchat
+        = image_tag tweet.image.thumb

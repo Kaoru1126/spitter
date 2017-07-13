@@ -31,15 +31,7 @@
             = @myFollowersCount
 .following
   .index-container
-    .index__left
-      .index__bio
-        .index__bio__box--top
-        .index__bio__box--bottom
-          .index__bio__box--icon
-          .index__bio__box--name
-          .index__bio__box--stats
-      .index__trends-box
-        %h3 プロフィール
+    = render 'layouts/indexLeft'
     .user__main
       .user__main--timeline__tweetbox
         .tweetBox
@@ -49,16 +41,6 @@
           .followingBtn
             = link_to "フォロー", following_users_path
       .user__main--stream__box
-        - @myTweets.each do |tweet|
-          .user__main--stream__tweets
-            .userIcon
-            .nameTime__box
-              %li.userAndTime
-                = tweet.user.name + "・" +tweet.created_at.strftime("%Y年%m月%d日 %H時%M分")
-            %li.tweetContent
-              = tweet.content
-            %li.tweetImage
-              = image_tag tweet.image
-
+        = render 'layouts/mainTweet'
     .index__right
       = render 'layouts/indexRight'
