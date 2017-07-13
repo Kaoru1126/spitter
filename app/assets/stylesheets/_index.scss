@@ -1,7 +1,17 @@
 // @import "./variables";
 
+
+
+.clearfix{
+  @include clearfix;
+}
+
 h3 {
   font-weight: bold;
+}
+
+a{
+  text-decoration: none;
 }
 
 .header__container {
@@ -16,11 +26,11 @@ h3 {
   padding-top: 56px;
   background-color: $indexBack;
   min-height: 100vh;
-  &:after {
-  content: "";
-  clear: both;
-  display: block;
-  }
+  // &:after {
+  // content: "";
+  // clear: both;
+  // display: block;
+  // }
 }
   .header__space {
   color: green;
