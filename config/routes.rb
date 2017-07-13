@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :tweets, only: [:index, :new, :create] do
     collection do
       get 'moment'
+      get 'caution'
+      post 'checked'
     end
   end
 

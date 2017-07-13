@@ -3,7 +3,6 @@ class UsersController < ApplicationController
 
   def show
 # recommendsだす
-  binding.pry
     @followedUsers = Relation.where(user_id: current_user.id)
     following_ids = []
     following_ids << current_user.id
@@ -14,7 +13,6 @@ class UsersController < ApplicationController
   end
 
   def following
-    binding.pry
     followingIDs = []
     @allFollowings = Relation.where(user_id: current_user.id)
     @allFollowings.each do |follows|

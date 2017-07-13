@@ -15,7 +15,6 @@ class RelationsController < ApplicationController
 
 
   def index
-    # binding.pry
     # @followings =
     # @followers =
     # @recommends = User.all
