@@ -13,9 +13,14 @@ h3 {
 
 .index {
   width: 100vw;
-  // height: 100vh;
   padding-top: 56px;
   background-color: $indexBack;
+  min-height: 100vh;
+  &:after {
+  content: "";
+  clear: both;
+  display: block;
+  }
 }
   .header__space {
   color: green;
