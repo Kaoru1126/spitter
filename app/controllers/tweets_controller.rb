@@ -1,79 +1,29 @@
 class TweetsController < ApplicationController
   before_action :set_user, only: [:index, :crete, :caution, :checked]
-  # before_action :checking_word, only: [:create]
+  before_action :checking_word, only: [:create]
 
   def new
     @tweet = Tweet.new
   end
 
-  # def create
-  #   bindign.pry
-  #   @tweet = Tweet.new(tweet_params)
-  #   if @tweet.save
-  #     flash[:notice] = 'ツイートしました'
-  #     redirect_to root_path
-  #   else
-  #     flash[:alert] = "ツイートに失敗しました"
-  #     render :new
-  #   end
-  # end
-
-  # def create
-  #   @tweet = Tweet.new(tweet_params)
-  #   checkedContent = ["#{@tweet.content}"]
-  #    if checkedContent.include?("しね")
-  #     return checkedContent
-  #     redirect_to caution_tweets_path
-  #   elsif @tweet.save
-  #     flash[:notice] = 'ツイートしました'
-  #     redirect_to root_path
-  #   else
-  #     flash[:alert] = "ツイートに失敗しました"
-  #     render :new
-  #   end
-  # end
-
-
-  # def caution(create)
-  #   @tweet = Tweet.new(tweet_params)
-  #   if @tweet.save
-  #     flash[:notice] = 'ツイートしました'
-  #     redirect_to root_path
-  #   else
-  #     flash[:alert] = "ツイートに失敗しました"
-  #     render :new
-  #   end
-  # end
-
-   def create
+  def create
     @tweet = Tweet.new(tweet_params)
-    checkedContent = ["#{@tweet.content}"]
-     if checkedContent.include?("しね")
-      @tweet = Tweet.new(tweet_params)
-      render :caution
-    elsif @tweet.save
+      if @tweet.save
       flash[:notice] = 'ツイートしました'
       redirect_to root_path
-    else
+      else
       flash[:alert] = "ツイートに失敗しました"
       render :new
     end
   end
 
-  def caution(checkedContent)
-    @tweet = Tweet.new(tweet_params)
-    return @tweet
-    # if @tweet.save
-    #   flash[:notice] = 'ツイートしました'
-    #   redirect_to root_path
-    # else
-    #   flash[:alert] = "ツイートに失敗しました"
-    #   render :caution
-    # end
+  def caution
+    @tweet = Tweet.new
   end
 
   def checked
-     if @tweet.save(tweet_params)
+    @tweet = Tweet.new(tweet_params)
+     if @tweet.save
       flash[:notice] = 'ツイートしました'
       redirect_to root_path
     else
@@ -113,15 +63,54 @@ class TweetsController < ApplicationController
     params.require(:tweet).permit(:content, :image).merge(user_id: current_user.id)
   end
 
-  # def checking_word
-  #   if @tweet.include?("死") == true
-  #     render :index
+  def checking_word
+    @tweet = Tweet.new(tweet_params)
+    checkedContent = ["#{@tweet.content}"]
+     if checkedContent.include?("しね")
+     render :caution
+    end
+  end
+end
+
+
+# def create
+  #   @tweet = Tweet.new(tweet_params)
+  #   checkedContent = ["#{@tweet.content}"]
+  #    if checkedContent.include?("しね")
+  #     return checkedContent
+  #     redirect_to caution_tweets_path
+  #   elsif @tweet.save
+  #     flash[:notice] = 'ツイートしました'
+  #     redirect_to root_path
+  #   else
+  #     flash[:alert] = "ツイートに失敗しました"
+  #     render :new
   #   end
   # end
 
-  # def badWords
 
+  # def caution(create)
+  #   @tweet = Tweet.new(tweet_params)
+  #   if @tweet.save
+  #     flash[:notice] = 'ツイートしました'
+  #     redirect_to root_path
+  #   else
+  #     flash[:alert] = "ツイートに失敗しました"
+  #     render :new
+  #   end
   # end
 
-end
-
+  #  def create
+  #   @tweet = Tweet.new(tweet_params)
+  #   checkedContent = ["#{@tweet.content}"]
+  #    if checkedContent.include?("しね")
+  #     @tweet = Tweet.new(tweet_params)
+  #     render :caution
+  #   elsif @tweet.save
+  #     flash[:notice] = 'ツイートしました'
+  #     redirect_to root_path
+  #   else
+  #     flash[:alert] = "ツイートに失敗しました"
+  #     render :new
+  #   end
+  # end

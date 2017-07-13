@@ -1,11 +1,12 @@
 .tweet-area__background
   .tweet-area
-    = form_for @tweet do |f|
+    = form_for @tweet, url: checked_tweets_path  do |f|
       .tweet__box--top
         = f.label :text, "本当にツイートしますか？"
       .tweet__box--bottom
         = f.text_field :content, :placeholer => "just give it a shot", :class => "new__tweetBox"
-        = link_to 'Tweet', checked_tweets_path, method: :post, :class => "new__tweetBtn"
+        = f.submit "Tweet", :class => "new__tweetBtn"
+        / = link_to "Tweet", checked_tweets_path, method: :post, :class => "new__tweetBtn", :type => "hidden", :value => @tweet
         = f.label :image, :class => "new__tweetImageLabel"
         = f.file_field :image, :class => "new__tweetImageBtn"
         .tweet__box--tool
@@ -13,3 +14,5 @@
 
 / = link_to 'Create', hoges_path(hoge: {user_id: current_user.id, body: 'fuga'}), method: :post
 / = f.submit "Tweet", :class => "new__tweetBtn"
+
+/ = link_to "Tweet", checked_tweets_path, method: :post, :class => "new__tweetBtn", :type => "hidden", :value => @tweet
