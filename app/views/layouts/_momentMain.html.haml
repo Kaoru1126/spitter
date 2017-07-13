@@ -4,12 +4,4 @@
       .moment__main--timeline__tweetbox__box
         %p.tweetbox モメント
   .moment__main--stream__box
-    - @moments.each do |moment|
-      .moment__main--stream__tweets
-        %ul
-          %li.user
-            = moment.user.name
-          %li.timestamp
-            = moment.created_at.strftime("%Y/%m/%d %H:%M:%S")
-          %li.textinchat
-            = moment.content
+    = render 'layouts/mainTweet'

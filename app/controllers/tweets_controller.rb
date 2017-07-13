@@ -7,6 +7,7 @@ class TweetsController < ApplicationController
   end
 
   def create
+    binding.pry
     @tweet = Tweet.new(tweet_params)
       if @tweet.save
       flash[:notice] = 'ツイートしました'
@@ -22,6 +23,7 @@ class TweetsController < ApplicationController
   end
 
   def checked
+    binding.pry
     @tweet = Tweet.new(tweet_params)
      if @tweet.save
       flash[:notice] = 'ツイートしました'
@@ -33,6 +35,7 @@ class TweetsController < ApplicationController
   end
 
   def index
+    @user = current_user
     @followedUsers = Relation.where(user_id: current_user.id)
     following_ids = []
     following_ids << current_user.id
@@ -43,7 +46,8 @@ class TweetsController < ApplicationController
   end
 
   def moment
-    @moments = Tweet.order("created_at DESC")
+    @user = current_user
+    @tweets = Tweet.order("created_at DESC")
     @followedUsers = Relation.where(user_id: current_user.id)
     following_ids = []
     following_ids << current_user.id
@@ -65,8 +69,7 @@ class TweetsController < ApplicationController
 
   def checking_word
     @tweet = Tweet.new(tweet_params)
-    checkedContent = ["#{@tweet.content}"]
-     if checkedContent.include?("しね")
+     if @tweet.content.include?("しね")
      render :caution
     end
   end

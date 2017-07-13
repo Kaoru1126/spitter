@@ -41,8 +41,12 @@ p.tweetbox {
 .moment__main--stream__tweets {
   background-color: white;
   width: 564px;
-  height: 130px;
+  min-height: 130px;
   padding: 9px 12px 9px 12px;
   border-bottom: solid 1px $indexBack;
+}
+
+.textinchat{
+  word-break: break-all;
 }
 
