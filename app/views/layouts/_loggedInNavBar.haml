@@ -13,16 +13,7 @@
           = form_tag('/products/search', method: :get) do
             %input.searchBar{:name => "keyword", :placeholder => "キーワード検索", :type => "text", :value => ""}/
       %ul.navBar__actionBTN__area
-        = link_to "", user_path(current_user.id), :class=>"navBar__iconBTN"
+        = link_to image_tag(current_user.avatar, {:class=>"navBar__iconBTN"}),user_path(current_user.id)
         .navBar__tweetBTN
           = link_to "ツイート", new_tweet_path, :class=>"navBar__tweetBTN--text"
 
-
-
-
-
-/ <%= link_to new_customer_path(@loginUser), class:"btn btn-primary" do %>
-/  = link_to new_customer_path(@loginUser), class:"btn btn-primary" do
-/   <i class="fa fa-user-plus"> アカウント登録</i>
-/   %i.fa.fa-user-plus アカウント登録
-/ <% end %>

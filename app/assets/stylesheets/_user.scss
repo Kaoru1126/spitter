@@ -122,17 +122,25 @@ input#submit {
 
 
 .logoutBtn__space {
-  
 }
 
+.areaEdit{
+  width: 100vw;
+  height: 100vh;
+  background-color: $indexBack;
+}
 
+.areaEdit__BOX{
+  width: 60%;
+  background-color: gray;
+  margin: 0 auto;
+  padding-top: 50px;
+}
 
-
-
-
-
-
-
+.field {
+  font-weight: bold;
+  font-size: 18px;
+}
 
 
 

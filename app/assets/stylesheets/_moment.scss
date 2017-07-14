@@ -50,3 +50,13 @@ p.tweetbox {
   word-break: break-all;
 }
 
+.main__top{
+  display: flex;
+}
+
+.main__top--icon{
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

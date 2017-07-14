@@ -1,11 +1,14 @@
 - @tweets.each do |tweet|
   .moment__main--stream__tweets
-    %ul
-      %li.user
-        = tweet.user.name
-      %li.timestamp
-        = tweet.created_at.strftime("%Y/%m/%d %H:%M:%S")
-      %li.textinchat
-        = tweet.content
-      %li.imageinchat
-        = image_tag tweet.image.thumb
+    .main__top
+      .main__top--icon
+        = image_tag tweet.user.avatar, class: "main__top--icon"
+      .main__top--right
+        .main__top--name
+          = tweet.user.name
+        .main__top--date
+          = tweet.created_at.strftime("%Y/%m/%d %H:%M:%S")
+    .main__bottom
+      = tweet.content
+      = image_tag tweet.image.thumb
+    .main__stats
