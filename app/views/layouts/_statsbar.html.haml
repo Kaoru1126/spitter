@@ -1,0 +1,26 @@
+.statsbar__area__block
+  .editBtn__area
+    .editBtn
+      %p.editBtn--text
+        = link_to "プロフィールを編集", edit_user_registration_path
+  .logoutBtn__area
+    .logoutBtn
+      %p.logoutBtn--text
+        = link_to "ログアウト", destroy_user_session_path, method: :delete
+  .numOfTweet--area
+    .numOfTweet__text--area
+      %p.numOfTweet--text
+        = link_to "ツイート", user_path(current_user.id)
+    .itsNumber
+      = @myTweetCount
+  .numOfTweet--area
+    .numOfTweet__text--area
+      %p.numOfTweet--text
+        = link_to "フォロー", following_users_path
+    .itsNumber
+      = @myFollowingsCount
+  .numOfTweet--area
+    .numOfTweet__text--area
+      %p.numOfTweet--text フォロワ
+    .itsNumber
+      = @myFollowersCount

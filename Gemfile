@@ -73,4 +73,5 @@ gem 'erb2haml'
 gem "font-awesome-rails"
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
+gem 'fog'
 
