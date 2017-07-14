@@ -27,7 +27,6 @@ class UsersController < ApplicationController
   end
 
 private
-
   def set_stats
     # ツイートカウント
     @tweets = current_user.tweets.order("created_at DESC")
