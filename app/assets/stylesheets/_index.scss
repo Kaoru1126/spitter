@@ -12,6 +12,10 @@ a{
   text-decoration: none;
 }
 
+.index__bio__box--name a {
+  color: black;
+}
+
 .header__container {
   height: 46px;
   width: 100%;
@@ -230,6 +234,7 @@ p.tweetbox {
 
 .recomendUsers__name{
   font-size: 14px;
+  font-weight: bold;
 }
 
 .recomendUsers__followBTN--area{
@@ -259,7 +264,6 @@ p.tweetbox {
 .recomendUsers__iconPic--area{
   width: 48px;
   height: 48px;
-  border: 1px solid black;
   border-radius: 50%;
   float: left;
 }
