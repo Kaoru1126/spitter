@@ -68,12 +68,11 @@ position: absolute;
 .following__cells__bottom--name{
   font-weight: bold;
   font-size: 18px;
-  position: absolute;
-    top: 140px;
-    left: 20px;
+  margin-top: 40px;
 }
 
 .following__cells__bottom--intro{
+word-break: break-all;
 
 }
 

@@ -9,6 +9,6 @@ class User < ApplicationRecord
   has_many :tweets
   has_many :relations
 
-  mount_uploader :avatar, ImageUploader
+  mount_uploader :avatar, AvatarUploader
 end
 

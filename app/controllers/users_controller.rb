@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_stats, only: [:show, :following]
+  before_action :set_stats, only: [:show, :following, :follower]
 
   def show
 # recommendsだす
@@ -18,6 +18,19 @@ class UsersController < ApplicationController
     @allFollowings = Relation.where(user_id: current_user.id)
     @allFollowings.each do |follows|
     followingIDs << follows.following_id
+    end
+    @nameBox = []
+    @followingsFromUser = User.where(id:followingIDs)
+    @followingsFromUser.each do |userName|
+    @nameBox << userName
+    end
+  end
+
+  def follower
+    followingIDs = []
+    @allFollowings = Relation.where(following_id: current_user.id)
+    @allFollowings.each do |follows|
+    followingIDs << follows.user_id
     end
     @nameBox = []
     @followingsFromUser = User.where(id:followingIDs)
