@@ -3,7 +3,6 @@ class UsersController < ApplicationController
 
   def show
 # recommendsだす
-    @user = User.find(params[:id])
     @followedUsers = Relation.where(user_id: current_user.id)
     following_ids = []
     following_ids << current_user.id
@@ -15,7 +14,7 @@ class UsersController < ApplicationController
 
   def following
     followingIDs = []
-    @allFollowings = Relation.where(user_id: current_user.id)
+    @allFollowings = Relation.where(user_id: @user.id)
     @allFollowings.each do |follows|
     followingIDs << follows.following_id
     end
@@ -28,7 +27,7 @@ class UsersController < ApplicationController
 
   def follower
     followingIDs = []
-    @allFollowings = Relation.where(following_id: current_user.id)
+    @allFollowings = Relation.where(following_id: @user.id)
     @allFollowings.each do |follows|
     followingIDs << follows.user_id
     end
@@ -41,17 +40,18 @@ class UsersController < ApplicationController
 
 private
   def set_stats
+    @user = User.find(params[:id])
     # ツイートカウント
-    @tweets = current_user.tweets.order("created_at DESC")
+    @tweets = @user.tweets.order("created_at DESC")
     @myTweetCount = @tweets.count
     # フォローカウント
-    @myFollowings = current_user.relations
+    @myFollowings = @user.relations
     @myFollowingsCount = @myFollowings.count
     if @myFollowingsCount == nil
       return 0
     end
     # フォロワーカウント
-    allFollowers = Relation.where(following_id: current_user.id)
+    allFollowers = Relation.where(following_id: @user.id)
     @myFollowersCount = allFollowers.count
     if @myFollowersCount == nil
       return 0
