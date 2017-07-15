@@ -10,18 +10,18 @@
   .numOfTweet--area
     .numOfTweet__text--area
       %p.numOfTweet--text
-        = link_to "ツイート", user_path(current_user.id)
+        = link_to "ツイート", user_path(@user.id)
     .itsNumber
       = @myTweetCount
   .numOfTweet--area
     .numOfTweet__text--area
       %p.numOfTweet--text
-        = link_to "フォロー", following_users_path
+        = link_to "フォロー", following_user_path
     .itsNumber
       = @myFollowingsCount
   .numOfTweet--area
     .numOfTweet__text--area
       %p.numOfTweet--text
-        = link_to "フォロワ", follower_users_path
+        = link_to "フォロワ", follower_user_path
     .itsNumber
       = @myFollowersCount
