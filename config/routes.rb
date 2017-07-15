@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   end
 
   resources :users, only: [:show] do
-    collection do
+    member do
       get 'following'
       get 'follower'
     end

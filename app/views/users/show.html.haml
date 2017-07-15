@@ -9,13 +9,6 @@
   .index-container
     = render 'layouts/indexLeft'
     .user__main
-      .user__main--timeline__tweetbox
-        .tweetBox
-          .tweetBtn
-            = link_to "ツイート", user_path(current_user.id)
-        .followingBox
-          .followingBtn
-            = link_to "フォロー", following_users_path
       .user__main--stream__box
         = render 'layouts/mainTweet'
     .index__right
