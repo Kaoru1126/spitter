@@ -22,8 +22,10 @@
           .following__cells
             .following__cells__top
             .following__cells__bottom
-              .following__cells__bottom--icon
+              = link_to following do
+                .following__cells__bottom--icon
+                  = image_tag following.avatar, class: "iconSmall"
+                .following__cells__bottom--name
+                  = following.name
               .following__cells__bottom--btn フォロー中
-              .following__cells__bottom--name
-                = following.name
               .following__cells__bottom--intro

@@ -3,7 +3,7 @@
     .index__bio__box--bottom
       .index__bio__box--icon
       .index__bio__box
-        = link_to image_tag(current_user.avatar, {:class=>"index__bio__box--iconBox"}),user_path(current_user.id)
+        = link_to image_tag(@user.avatar, {:class=>"index__bio__box--iconBox"}),user_path(@user.id)
         .index__bio__box--name
           = link_to @user.name, user_path(@user)
       .index__bio__box--stats
