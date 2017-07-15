@@ -41,6 +41,7 @@ class TweetsController < ApplicationController
       following_ids << followed.following_id
     end
     @recommends = User.where.not(id:following_ids).limit(3)
+    @tweets = Tweet.where("user_id IN(?)", following_ids).order("created_at DESC")
   end
 
   def moment
