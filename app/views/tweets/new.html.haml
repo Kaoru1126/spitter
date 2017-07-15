@@ -4,7 +4,7 @@
       .tweet__box--top
         = f.label :text, "ツイートする"
       .tweet__box--bottom
-        = f.text_field :content, :placeholder => "just give it a shot :)", :class => "new__tweetBox", maxlength: "140"
+        = f.text_area :content, :placeholder => "just give it a shot :)", :class => "new__tweetBox", maxlength: "140"
         = f.submit "Tweet", :class => "new__tweetBtn"
         = f.label :image, :class => "new__tweetImageLabel"
         = f.file_field :image, :class => "new__tweetImageBtn"
