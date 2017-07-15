@@ -34,10 +34,10 @@
 
 .numOfTweet--area {
   text-align: center;
+  font-weight: bold;
   width: 48px;
   height: 37px;
   padding: 14px 15px 7px 15px;
-  border-bottom: 2px solid $myGreen;
   display: inline-block;
   font-size: 12px;
 }
@@ -46,6 +46,10 @@
   font-size: 12px;
   font-weight: bold;
   vertical-align: top;
+}
+
+.numOfTweet--text a {
+  color: gray;
 }
 
 .numOfTweet--text {
@@ -70,6 +74,7 @@
   padding-left: 2px;
   float: right;
   .logoutBtn{
+    font-weight: bold;
     width: 96px;
     height: 20px;
     padding: 6px 16px;
@@ -91,6 +96,7 @@
   padding-left: 2px;
   float: right;
   .editBtn{
+    font-weight: bold;
     width: 126px;
     height: 20px;
     padding: 6px 16px;

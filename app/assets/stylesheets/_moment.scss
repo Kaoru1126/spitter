@@ -54,6 +54,11 @@ p.tweetbox {
   display: flex;
 }
 
+.main__top--name a {
+  font-weight: bold;
+  color: black;
+}
+
 .main__top--icon{
   margin-right: 10px;
   width: 40px;

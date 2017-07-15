@@ -10,9 +10,9 @@
             .recomendUsers__name
               = recommend.name
           .recomendUsers__followBTN--area
-            .recomendUsers__followBTN.followTrigger{user: {id: current_user.id}, following: {id: recommend.id}} フォローする
+            .recomendUsers__followBTN.followTrigger.recomendBTNHover{user: {id: current_user.id}, following: {id: recommend.id}} フォローする
         .recomendUsers--left
-          .recomendUsers__iconPic--area
+          = image_tag (recommend.avatar), class: "recomendUsers__iconPic--area"
   .index__right__import
   .index__right__terms
     %p.index__right__terms--top ©2017 Spitter Spitterについて
