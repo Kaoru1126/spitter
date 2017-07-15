@@ -7,5 +7,7 @@
         .index__bio__box--name
           = link_to @user.name, user_path(@user)
       .index__bio__box--stats
+      .index__bio__box--intro
+        = simple_format(@user.intro)
   .index__trends-box
     %h3 トレンド

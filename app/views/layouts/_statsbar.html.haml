@@ -21,6 +21,7 @@
       = @myFollowingsCount
   .numOfTweet--area
     .numOfTweet__text--area
-      %p.numOfTweet--text フォロワ
+      %p.numOfTweet--text
+        = link_to "フォロワ", follower_users_path
     .itsNumber
       = @myFollowersCount
