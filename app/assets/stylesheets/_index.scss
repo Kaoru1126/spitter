@@ -95,6 +95,11 @@ a{
   margin-top: 5px;
 }
 
+// .iconBig{
+//   width: 60px;
+//   height: 60px;
+// }
+
 .index__bio__box--name {
   font-size: 18px;
   font-weight: bold;
@@ -241,6 +246,7 @@ p.tweetbox {
   padding: 4px 12px;
   border: solid 1px $myGreen3;
   border-radius: 50px;
+  cursor: pointer;
 }
 
 .recomendUsers--left{
