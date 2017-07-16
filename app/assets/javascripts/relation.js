@@ -83,16 +83,16 @@ $('.recomendBTNHover').hover(function() {
   //   });
   // });
 
-// 人のフォロワーのフォロボタンのホバー
-$('.following__cells__bottom--btn').hover(function(){
-  console.log('ふぉろーほば');
-  $(this).find('a').text('フォロー');
-  $(this).css('background-color', '#A3EBCE').css('color', '#ffffff');
-  }, function(){
-  $(this).find('a').text("フォロー");
-  $(this).css('background-color', '#46D89E').css('color', '#ffffff')
-  console.log("!!");
-});
+// 人のフォロワーのフォロボタンのホバー挙動をTRTパイセンに相談
+// $('.followerFollowBTN').hover(function(){
+//   console.log('ふぉろーほば');
+//   $(this).find('a').text('フォロー');
+//   $(this).css('background-color', '#A3EBCE').css('color', '#ffffff');
+//   }, function(){
+//   $(this).find('a').text("フォロー");
+//   $(this).css('background-color', '#46D89E').css('color', '#ffffff')
+//   console.log("!!");
+// });
 
 
 });

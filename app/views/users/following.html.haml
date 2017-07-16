@@ -23,7 +23,7 @@
             .following__cells__top
             .following__cells__bottom
               - if amIfollowing?(following)
-                .following__cells__bottom--btn.followBTNHover
+                .following__cells__bottom--btn.followBTNHover.followerFollowBTN
                   = link_to "フォロー中", relation_path(current_user.relations.find_by(following_id:following.id)), method: :delete
               - else
                 .following__cells__bottom--btn.followTrigger2{user: {id: current_user.id}, following: {id: following.id}} フォロー
