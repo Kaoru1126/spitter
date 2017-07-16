@@ -29,7 +29,8 @@
   height: 800px;
   width: 100vw;
   background-size: cover;
-  background-image: image-url("background/tw-session.jpg");
+  background-image: image-url("background/signup_bg1.jpg");
+  animation: moveBg 60s infinite linear;
 }
 
 .frontcard {
@@ -61,6 +62,8 @@
   float: right;
   width: 300px;
   &--top {
+    padding-left: 10px;
+    padding-top: 10px;
     height: 117px;
     margin-bottom: 11px;
     background: rgba(255, 255, 255, 0.7);
@@ -80,36 +83,37 @@
   border-bottom: 1px solid gray ;
 }
 
+.field#email{
+  width: 80%;
+}
+
 input#user_email {
-  width: 266px;
-  height: 20px;
+  width: 90%;
   padding: 4px;
-  border: solid 1px gray;
-  margin: 12px 12px 15px 12px;
+  margin: 0px 0px 10px 0px;
+}
+
+input#user_name{
+  margin-bottom: 10px;
+  width: 90%;
+  padding: 4px;
 }
 
 .field#password-box {
   display: inline-block;
+  width: 85%;
 }
 
 input#user_password {
-  width: 167.4px;
-  height: 20px;
+  width: 55%;
   padding: 4px;
-  border: soli 1px gray;
-  margin-top: 6px;
-  margin-left: 12px;
+  margin: 0px 0px 10px 0px;
 }
 
-.actions#action-btn {
-  float: right;
-  color: $lightBlue;
-  height: 16px;
-  width: 56px;
-  padding: 6px 16px 6px 16px;
-  line-height: 11px;
-  border: 1px solid #lightBlue;
-
+input#user_password_confirmation{
+  width: 55%;
+  padding: 4px;
+  margin: 0px 0px 10px 0px;
 }
 
 input#submit {
@@ -117,6 +121,36 @@ input#submit {
   font-weight: bold;
   height: 16px;
   width: 56px;
+}
+
+input.signUp{
+  font-size: 14px;
+  border-radius: 100px;
+  width: 50%;
+  height: 20%;
+  margin: 7px 0px 30px 0px;
+  padding: 6px 16px;
+  background-color: $myGreen;
+  color: white;
+  display: inline-block;
+  border:none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.session_login{
+  width: 34%;
+  height: 10%;
+  font-size: 14px;
+  border-radius: 100px;
+  margin: 7px 0px 7px 0px;
+  padding: 6px 16px;
+  background-color: $myGreen;
+  color: white;
+  display: inline-block;
+  border:none;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .field#remember {
@@ -154,6 +188,7 @@ input#submit {
   background-color: $myGreen;
   padding: 5px 10px;
   text-align: center;
+  cursor: pointer;
 }
 
 .forgotYourPass a{
@@ -176,11 +211,15 @@ input#submit {
 }
 
 .main-container--signup {
-  height: 800px;
+  height: 100vh;
   width: 100vw;
   background-size: cover;
   background-image: image-url("background/signup_bg3.jpg");
   animation: moveBg 60s infinite linear;
+}
+
+.h2__signup{
+font-weight: bold;
 }
 
 .frontCard--signup{
@@ -189,7 +228,7 @@ input#submit {
   top: 15%;
   margin: 0 auto;
   max-width: 330px;
-  padding: 10px 30px;
+  padding: 10px 10px 30px 10px;
   color: black;
   font-weight: bold;
   background: rgba(255, 255, 255, 0.6);
@@ -208,3 +247,15 @@ input#submit {
   font-size: 45px;
 }
 
+.alreadyHave{
+    width: 40%;
+    height: 10%;
+    font-size: 14px;
+    border-radius: 100px;
+    margin: 10px 0px 7px 0px;
+    padding: 10px 15px;
+    background-color: $lightBlue;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
