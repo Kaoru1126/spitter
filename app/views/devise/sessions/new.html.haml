@@ -13,12 +13,9 @@
     .frontcard__right
       .frontcard__right--top
         = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-          .field#email
-            = f.email_field :email, :placeholder => "メールアドレス", autofocus: true
-          .field#password-box
-            = f.password_field :password, :placeholder => "パスワード", autocomplete: "off"
-          .actions#action-btn
-            = f.submit "ログイン"
+          = f.email_field :email, :placeholder => "メールアドレス", autofocus: true
+          = f.password_field :password, :placeholder => "パスワード", autocomplete: "off"
+          = f.submit  "ログイン", class: "session_login"
           - if devise_mapping.rememberable?
             .field#remember
               = f.check_box :remember_me
