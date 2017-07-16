@@ -2,6 +2,7 @@
 color: white;
 }
 
+
 .following {
   width: 100vw;
   padding-top: 10px;
@@ -67,12 +68,14 @@ position: absolute;
   background-color: $myGreen;
   float: right;
   text-align: center;
+  cursor: pointer;
 }
 
 .following__cells__bottom--name{
   font-weight: bold;
   font-size: 18px;
   margin-top: 40px;
+  color: black;
 }
 
 .following__cells__bottom--intro{
