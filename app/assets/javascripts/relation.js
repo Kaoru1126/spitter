@@ -6,7 +6,7 @@ $(function() {
   //   }
   $('.followBTNHover').hover(function() {
     console.log("hover");
-   $(this).find('a').text("フォロ解除");
+   $(this).find('a').text("解除");
    $(this).css('background-color', 'red');
   }, function(){
    $(this).find('a').text("フォロー中");
@@ -54,10 +54,10 @@ $(function() {
 // レコメンドのホバーと色変え
 $('.recomendBTNHover').hover(function() {
     console.log("recomend!");
-   $(this).find('a').text("フォローする");
+   $(this).find('a').text("フォロー");
    $(this).css('background-color', '#46D89E').css('color', '#ffffff');
   }, function(){
-   $(this).find('a').text("フォローする");
+   $(this).find('a').text("フォロー");
    $(this).css('background-color', '#ffffff').css('color', '#21A700');
    console.log("white!!");
   });
@@ -82,6 +82,18 @@ $('.recomendBTNHover').hover(function() {
   //     alert('error');
   //   });
   // });
+
+// 人のフォロワーのフォロボタンのホバー
+$('.following__cells__bottom--btn').hover(function(){
+  console.log('ふぉろーほば');
+  $(this).find('a').text('フォロー');
+  $(this).css('background-color', '#A3EBCE').css('color', '#ffffff');
+  }, function(){
+  $(this).find('a').text("フォロー");
+  $(this).css('background-color', '#46D89E').css('color', '#ffffff')
+  console.log("!!");
+});
+
 
 });
 
