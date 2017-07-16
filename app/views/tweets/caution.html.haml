@@ -4,7 +4,7 @@
       .tweet__box--top
         = f.label :text, "本当にツイートしますか？"
       .tweet__box--bottom
-        = f.text_field :content, :placeholder => "think again before you spit", :class => "new__tweetBox"
+        = f.text_area :content, :placeholder => "think again before you spit", :class => "new__tweetBox"
         = f.submit "Tweet", :class => "new__tweetBtn"
         / = link_to "Tweet", checked_tweets_path, method: :post, :class => "new__tweetBtn", :type => "hidden", :value => @tweet
         = f.label :image, :class => "new__tweetImageLabel"
