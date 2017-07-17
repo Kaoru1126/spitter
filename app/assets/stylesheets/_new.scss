@@ -6,6 +6,7 @@
 
 .tweet-area {
   width: 37%;
+  min-width: 335px;
   height: 210px;
   margin: 0 auto;
   border-radius: 6px;
@@ -29,9 +30,19 @@
   font-weight: bold;
 }
 
-textarea.new__tweetBox{
-  max-width: 465px;
-  min-width: 200px;
+.tweetCancel{
+  text-align: center;
+  line-height: 30px;
+  float: right;
+  font-weight: bold;
+  color: white;
+  background-color: $myGreen;
+  border: 1px solid $myGreen;
+  border-radius: 100px;
+  width: 88px;
+  height: 28px;
+  margin: 7px 0px;
+  cursor: pointer;
 }
 
 .tweet__box--title{
@@ -40,12 +51,10 @@ textarea.new__tweetBox{
   margin: 0 70.75px;
 }
 
-
-.new__tweetBox{
-  width: 511px;
-  height: 64px;
-  border: 0;
-  border-radius: 25px;
+textarea.new__tweetBox{
+  max-width: calc(100% - 35px);
+  width: 100%;
+  border-radius: 15px;
   box-shadow: none;
   font-size: 14px;
   padding: 8px 16px 8px 16px;
@@ -56,7 +65,7 @@ textarea.new__tweetBox{
 
 .tweet__box--bottom{
   background-color: $myGreen2;
-  padding: 15px 15px 30px 15px;
+  padding: 15px;
 }
 
 .tweet__box--tool{
@@ -68,13 +77,18 @@ textarea.new__tweetBox{
   font-size: 14px;
   font-weight: bold;
   color: white;
-  background-color: $myGreen2;
+  background-color: $myGreen;
   border: 1px solid $myGreen;
   border-radius: 100px;
   width: 90px;
   height: 30px;
-  margin: 7px 0px;
+  margin: 7px 5px;
   display: inline-block;
   line-height: 20px;
   cursor: pointer;
+}
+
+
+.new__tweetImageBtn{
+  width: 300px;
 }
