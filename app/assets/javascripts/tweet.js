@@ -62,5 +62,11 @@ $(function() {
   //   $(this).css('color', '#46D89E');
   // });
 
+  $(function(){
+    setInterval(function(){
+        $('.blink').fadeOut(300,function(){$(this).fadeIn(300)});
+    },100);
+});
+
 
 });
