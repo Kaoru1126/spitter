@@ -15,5 +15,5 @@
       %ul.navBar__actionBTN__area
         = link_to image_tag(current_user.avatar, {:class=>"navBar__iconBTN"}),user_path(current_user.id)
         .navBar__tweetBTN
-          = link_to "ツイート", new_tweet_path, :class=>"navBar__tweetBTN--text"
+          = link_to "ツイート", new_tweet_path, class: "navBar__tweetBTN--text tweetFlash"
 

@@ -1,14 +1,17 @@
-.edit-countainer {
-  height: 100vh;
+.edit-container {
+  height: 125vh;
   width: 100vw;
+  min-width: 600px;
   background-size: cover;
   background-image: image-url("background/signup_bg3.jpg");
   animation: moveBg 60s infinite linear;
 }
 
 .areaEdit__BOX{
+  position: relative;
+  top: 50px;
+  min-height: 300px;
   text-align: left;
-  top: 30px;
   margin: 0 auto;
   max-width: 400px;
   padding: 10px 10px 30px 10px;

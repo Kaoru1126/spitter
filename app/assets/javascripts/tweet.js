@@ -12,7 +12,7 @@ $(function() {
   });
 
   // ツイートボタンホバー
-  $('.navBar__tweetBTN--text').hover(function() {
+  $('.tweetFlash').hover(function() {
     $(this).text('ツイート');
     $(this).css('background-color', '#A3EBCE');
   }, function(){
@@ -55,12 +55,35 @@ $(function() {
     $(this).css('background-color', 'white');
   });
 
+
+// Tweet#new&caution
+  $('.cautionRed').hover(function() {
+    $(this).css('background-color', 'red');
+  }, function(){
+    $(this).css('background-color', '#46D89E');
+  });
+
+// Tweet#caution Cancel
+  $('.tweetCancel').hover(function() {
+    $(this).css('background-color', '#A3EBCE');
+  }, function(){
+    $(this).css('background-color', '#46D89E');
+  });
+
+
+
 // フィードの名前のホバー出来ない！！！
   // $('.main__top--name').hover(function(){
   //   $(this).children('a');
   //   console.log(this)
   //   $(this).css('color', '#46D89E');
   // });
+
+  $(function(){
+    setInterval(function(){
+        $('.blink').fadeOut(300,function(){$(this).fadeIn(300)});
+    },100);
+});
 
 
 });
