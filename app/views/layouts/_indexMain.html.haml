@@ -1,8 +1,8 @@
 .index__main
   .index__main--timeline__tweetbox
     .index__main--timeline__tweetbox__area
-      .index__main--timeline__tweetbox__box
-        %p.tweetbox いまなにしてる？
+      - if @path.is('tweets#index')
+        %p.home ホームです
   .index__main--stream__box
     = render "layouts/mainTweet"
 
