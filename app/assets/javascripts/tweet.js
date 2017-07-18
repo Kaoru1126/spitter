@@ -80,6 +80,7 @@ $(function() {
   //   $(this).css('color', '#46D89E');
   // });
 
+// tweet#cautoinのぶりんく
   $(function(){
     setInterval(function(){
         $('.blink').fadeOut(300,function(){$(this).fadeIn(300)});
@@ -103,7 +104,7 @@ $(function() {
       hideNav: '.pagination',
       status: '.page-load-status',
     });
-  
+
 // infiniteScroll@user
   $('.user__main--stream__box').infiniteScroll({
       path: ".next > a",
