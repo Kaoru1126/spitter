@@ -132,15 +132,19 @@ a{
   float: left;
 }
 
+p.home{
+  text-align: center;
+}
+
+
 .index__main--timeline__tweetbox {
   width: 588px;
   height: 58px;
   background-color: $lightGreen;
   border: solid 1px $indexBack;
   &__area {
-    width: 508px;
     height: 38px;
-    padding: 10px 12px;
+    padding: 10px 0;
   }
   &__box{
     width: 506px;
@@ -258,7 +262,6 @@ p.tweetbox {
 }
 
 .recomendUsers--left{
-
 }
 
 
@@ -304,6 +307,14 @@ p.tweetbox {
 }
 
 // infinite scroll animation(wheel)
+.page-load-status {
+  display: none; /* hidden by default */
+  padding-top: 20px;
+  border-top: 1px solid #DDD;
+  text-align: center;
+  color: #777;
+}
+
 .loader-wheel {
   font-size: 42px; /* change size here */
   position: relative;

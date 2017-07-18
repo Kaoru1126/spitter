@@ -1,6 +1,11 @@
 class TweetsController < ApplicationController
-  before_action :set_user, only: [:index, :crete, :caution, :checked]
+  before_action :set_user, only: [:index, :crete, :caution, :checked, :search, :moment]
   before_action :checking_word, only: [:create]
+
+  def search
+    @tweets = Tweet.where('content LIKE(?)', "%#{params[:keyword]}%").page(params[:page]).per(6)
+    @numOfTweets = @tweets.count
+  end
 
   def new
     @tweet = Tweet.new
@@ -33,33 +38,27 @@ class TweetsController < ApplicationController
   end
 
   def index
-    @user = current_user
-    @followedUsers = Relation.where(user_id: current_user.id)
-    following_ids = []
-    following_ids << current_user.id
-    @followedUsers.each do |followed|
-      following_ids << followed.following_id
-    end
-    @recommends = User.where.not(id:following_ids).limit(3)
-    @tweets = Tweet.where("user_id IN(?)", following_ids).order("created_at DESC").page(params[:page]).per(6)
+    @tweets = Tweet.where("user_id IN(?)", @following_ids).order("created_at DESC").page(params[:page]).per(6)
   end
 
   def moment
-    @user = current_user
     @tweets = Tweet.order("created_at DESC").page(params[:page]).per(6)
-    @followedUsers = Relation.where(user_id: current_user.id)
-    following_ids = []
-    following_ids << current_user.id
-    @followedUsers.each do |followed|
-      following_ids << followed.following_id
-    end
-    @recommends = User.where.not(id:following_ids).limit(3)
   end
 
   private
 
   def set_user
+    @user = current_user
     @tweet = current_user.id
+
+    # indexとmomentの共通処理
+    @followedUsers = Relation.where(user_id: current_user.id)
+    @following_ids = []
+    @following_ids << current_user.id
+    @followedUsers.each do |followed|
+      @following_ids << followed.following_id
+    end
+    @recommends = User.where.not(id:@following_ids).limit(3)
   end
 
   def tweet_params

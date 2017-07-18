@@ -1,8 +1,12 @@
 .moment__main
   .moment__main--timeline__tweetbox
     .moment__main--timeline__tweetbox__area
-      .moment__main--timeline__tweetbox__box
-        %p.tweetbox モメント
+      - if @path.is('tweets#search')
+        %p "#{params[:keyword]}"の検索結果は #{@numOfTweets}件です。
+      - if @path.is('tweets#moment')
+        %p みんなのスピット一覧です。
+      - if @path.is('tweets#index')
+        %p ホームです
   .moment__main--stream__box
     = render 'layouts/mainTweet'
 
