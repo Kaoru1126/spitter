@@ -308,7 +308,7 @@ p.tweetbox {
 
 // infinite scroll animation(wheel)
 .page-load-status {
-  display: hidden; /* hidden by default */
+  display: none; /* hidden by default */
   padding-top: 20px;
   border-top: 1px solid #DDD;
   text-align: center;
