@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       get 'moment'
       get 'caution'
       post 'checked'
+      get 'search'
     end
   end
 
