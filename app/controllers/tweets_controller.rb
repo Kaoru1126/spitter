@@ -3,8 +3,9 @@ class TweetsController < ApplicationController
   before_action :checking_word, only: [:create]
 
   def search
-    @tweets = Tweet.where('content LIKE(?)', "%#{params[:keyword]}%").page(params[:page]).per(6)
-    @numOfTweets = @tweets.count
+    tweets = Tweet.where('content LIKE(?)', "%#{params[:keyword]}%")
+    @numOfTweets = tweets.count
+    @tweets = tweets.order("created_at DESC").page(params[:page]).per(6)
   end
 
   def new
