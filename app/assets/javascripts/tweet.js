@@ -1,4 +1,5 @@
 $(function() {
+
   // globalNavBarの色
   $('.fa').hover(function() {
     console.log('hovaer!');
@@ -72,7 +73,7 @@ $(function() {
 
 
 
-// フィードの名前のホバー出来ない！！！
+// フィードの名前のホバーが...
   // $('.main__top--name').hover(function(){
   //   $(this).children('a');
   //   console.log(this)
@@ -84,6 +85,33 @@ $(function() {
         $('.blink').fadeOut(300,function(){$(this).fadeIn(300)});
     },100);
 });
+
+// infiniteScroll@moment
+  $('.moment__main--stream__box').infiniteScroll({
+    path: ".next > a",
+    append: '.moment__main--stream__tweets',
+    history: false,
+    hideNav: '.pagination',
+    status: '.page-load-status',
+  });
+
+// infiniteScroll@index
+  $('.index__main--stream__box').infiniteScroll({
+      path: ".next > a",
+      append: '.moment__main--stream__tweets',
+      history: false,
+      hideNav: '.pagination',
+      status: '.page-load-status',
+    });
+  
+// infiniteScroll@user
+  $('.user__main--stream__box').infiniteScroll({
+      path: ".next > a",
+      append: '.moment__main--stream__tweets',
+      history: false,
+      hideNav: '.pagination',
+      status: '.page-load-status',
+    });
 
 
 });
