@@ -42,7 +42,7 @@ private
   def set_stats
     @user = User.find(params[:id])
     # ツイートカウント
-    @tweets = @user.tweets.order("created_at DESC")
+    @tweets = @user.tweets.order("created_at DESC").page(params[:page]).per(6)
     @myTweetCount = @tweets.count
     # フォローカウント
     @myFollowings = @user.relations
