@@ -6,6 +6,7 @@ class RelationsController < ApplicationController
     @follow.save
     respond_to do |format|
        format.json
+       format.html { redirect_to controller: 'users', action: 'show', id: params[:following_id] }
     end
   end
 
