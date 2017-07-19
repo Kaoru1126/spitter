@@ -9,7 +9,22 @@
   .index-container
     = render 'layouts/indexLeft'
     .user__main
-      .user__main--stream__box
+      .moment__main--stream__box
         = render 'layouts/mainTweet'
+      = paginate(@tweets)
+      .page-load-status
+        .infinite-scroll-request.loader-wheel
+          %i
+            %i
+              %i
+                %i
+                  %i
+                    %i
+                      %i
+                        %i
+                          %i
+                            %i
+                              %i
+                                %i
     .index__right
       = render 'layouts/indexRight'
