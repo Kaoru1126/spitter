@@ -2,7 +2,7 @@
   margin-left: 8px;
   display: inline-block;
   float: left;
-  width: 49.3%;
+  max-height: 154px;
 }
 
 .moment__main--timeline__tweetbox {
@@ -35,7 +35,7 @@ p.tweetbox {
 .moment__main--stream__tweets {
   background-color: white;
   width: 564px;
-  min-height: 130px;
+  min-height: 154px;
   padding: 9px 12px 9px 12px;
   border-bottom: solid 1px $indexBack;
 }

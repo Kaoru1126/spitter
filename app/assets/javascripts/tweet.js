@@ -94,25 +94,28 @@ $(function() {
     history: false,
     hideNav: '.pagination',
     status: '.page-load-status',
+    elementScroll: '.index',
   });
 
 // infiniteScroll@index
   $('.index__main--stream__box').infiniteScroll({
-      path: ".next > a",
-      append: '.moment__main--stream__tweets',
-      history: false,
-      hideNav: '.pagination',
-      status: '.page-load-status',
-    });
+    path: ".next > a",
+    append: '.moment__main--stream__tweets',
+    history: false,
+    hideNav: '.pagination',
+    status: '.page-load-status',
+    elementScroll: '.index',
+  });
 
 // infiniteScroll@user
   $('.user__main--stream__box').infiniteScroll({
-      path: ".next > a",
-      append: '.moment__main--stream__tweets',
-      history: false,
-      hideNav: '.pagination',
-      status: '.page-load-status',
-    });
+    path: ".next > a",
+    append: '.moment__main--stream__tweets',
+    history: false,
+    hideNav: '.pagination',
+    status: '.page-load-status',
+    elementScroll: '.index',
+  });
 
 
 });
