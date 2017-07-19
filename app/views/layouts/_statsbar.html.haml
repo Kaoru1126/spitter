@@ -1,13 +1,18 @@
 .statsbar__area__block
-  .editBtn__area
-    .editBtn
-      %p.editBtn--text
-        - if current_user = @user.id
-          = link_to "プロフィールを編集", edit_user_registration_path
+  - if current_user == @user
+    .editBtn__area
+      = link_to edit_user_registration_path do
+        .editBtn
+          %p.editBtn--text プロフィールを編集
+  - else
+    .editBtn__area
+      = link_to relations_path(user_id:current_user, following_id:@user ), method: :post do
+        .editBtn
+          %p.editBtn--text フォロー
   .logoutBtn__area
-    .logoutBtn
-      %p.logoutBtn--text
-        = link_to "ログアウト", destroy_user_session_path, method: :delete
+    = link_to destroy_user_session_path, method: :delete do
+      .logoutBtn
+        %p.logoutBtn--text ログアウト
   .numOfTweet--area
     .numOfTweet__text--area
       %p.numOfTweet--text
