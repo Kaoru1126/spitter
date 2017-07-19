@@ -1,3 +1,7 @@
+.awesome{
+  @include awesome;
+}
+
 .editBtn--text a {
   color: gray;
 }
@@ -33,10 +37,8 @@
   }
 }
 
-
-.fa {
-  font-size: 18px;
-  font-weight: bold;
+.fa{
+  font-size: 20px;
 }
 
 .search{

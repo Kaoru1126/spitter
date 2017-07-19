@@ -2,9 +2,12 @@
   .moment__main--timeline__tweetbox
     .moment__main--timeline__tweetbox__area
       - if @path.is('tweets#search')
-        %p "#{params[:keyword]}"の検索結果は #{@numOfTweets}件です。
+        "#{params[:keyword]}"
+        %br/
+        の検索結果は#{@numOfTweets}件です
+        %i.fa.fa-search
       - if @path.is('tweets#moment')
-        %p みんなのスピット一覧です。
+        %i.fa.fa-bolt.awesome 皆のモメントをみよう。
       - if @path.is('tweets#index')
         %p ホームです
   .moment__main--stream__box

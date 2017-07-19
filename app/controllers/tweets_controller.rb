@@ -59,7 +59,7 @@ class TweetsController < ApplicationController
     @followedUsers.each do |followed|
       @following_ids << followed.following_id
     end
-    @recommends = User.where.not(id:@following_ids).limit(3)
+    @recommends = User.where.not(id:@following_ids).order("RAND()").limit(3)
   end
 
   def tweet_params

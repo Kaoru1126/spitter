@@ -2,7 +2,7 @@
   .index__main--timeline__tweetbox
     .index__main--timeline__tweetbox__area
       - if @path.is('tweets#index')
-        %p.home ホームです
+        %i.fa.fa-home.awesome ホーム
   .index__main--stream__box
     = render "layouts/mainTweet"
   = paginate(@tweets)
