@@ -132,20 +132,11 @@ a{
   float: left;
 }
 
-p.home{
-  text-align: center;
-}
-
-
 .index__main--timeline__tweetbox {
-  width: 588px;
-  height: 58px;
+  line-height: 55px;
   background-color: $lightGreen;
   border: solid 1px $indexBack;
-  &__area {
-    height: 38px;
-    padding: 10px 0;
-  }
+  text-align: center;
   &__box{
     width: 506px;
     height: 36px;
@@ -198,6 +189,7 @@ p.tweetbox {
   margin-bottom: 10px;
   font-size: 18px;
   font-weight: bold;
+  text-align:  center;
 }
 
 .recomem--field {
@@ -338,8 +330,5 @@ p.tweetbox {
   transform-origin: center 0.5em;
 }
 
-@keyframes loader-wheel-rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+
 

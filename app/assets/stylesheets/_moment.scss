@@ -2,26 +2,24 @@
   margin-left: 8px;
   display: inline-block;
   float: left;
+  width: 49.3%;
 }
 
 .moment__main--timeline__tweetbox {
-  width: 588px;
-  height: 58px;
+  padding: 2.5px 0;
+  word-break:break-all;
   background-color: $lightGreen;
   border: solid 1px $indexBack;
   &__area {
-    width: 508px;
-    height: 38px;
-    padding: 10px 12px;
+    text-align: center;
+    color:  gray;
   }
   &__box{
-    width: 506px;
     height: 36px;
     border-radius: 30px;
     background-color: white;
     border: solid 1px $myGreen2;
     margin-left: 56px;
-
   }
 }
 
@@ -32,10 +30,6 @@ p.tweetbox {
   height: 20px;
   line-height: 20px;
   padding: 8px 31px 8px 16px;
-}
-
-.moment__main--stream__box {
-
 }
 
 .moment__main--stream__tweets {
