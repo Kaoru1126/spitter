@@ -17,17 +17,16 @@ a{
 }
 
 .header__container {
-  height: 46px;
   width: 100%;
-  position: fixed;
   background-color: white;
 }
 
 .index {
+  overflow-y: scroll;
   width: 100vw;
-  padding-top: 56px;
+  padding-top: 10px;
   background-color: $indexBack;
-  min-height: 100vh;
+  flex: 1;
   // &:after {
   // content: "";
   // clear: both;
@@ -332,3 +331,8 @@ p.tweetbox {
 
 
 
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
