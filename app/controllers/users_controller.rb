@@ -9,7 +9,8 @@ class UsersController < ApplicationController
     @followedUsers.each do |followed|
       following_ids << followed.following_id
     end
-    @recommends = User.where.not(id:following_ids).limit(3)
+    @recommends = User.where.not(id:following_ids).order("RAND()").limit(3)
+
   end
 
   def following
@@ -42,8 +43,9 @@ private
   def set_stats
     @user = User.find(params[:id])
     # ツイートカウント
-    @tweets = @user.tweets.order("created_at DESC").page(params[:page]).per(6)
-    @myTweetCount = @tweets.count
+    tweets = @user.tweets.order("created_at DESC")
+    @tweets = tweets.page(params[:page]).per(6)
+    @myTweetCount = tweets.count
     # フォローカウント
     @myFollowings = @user.relations
     @myFollowingsCount = @myFollowings.count
