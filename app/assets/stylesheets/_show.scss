@@ -89,26 +89,28 @@
   }
 }
 
-.editBtn__area{
-  width: 160px;
-  height: 47px;
-  padding-top: 12px;
-  padding-left: 2px;
-  float: right;
-  .editBtn{
-    font-weight: bold;
-    width: 126px;
-    height: 20px;
-    padding: 6px 16px;
-    border: solid 1px gray;
-    border-radius: 100px;
-    .editBtn--text{
-      font-size: 14px;
-      line-height: 20px;
-      color: gray;
+  .editBtn__area{
+    width: 160px;
+    height: 47px;
+    padding-top: 12px;
+    padding-left: 2px;
+    float: right;
+    .editBtn{
+      font-weight: bold;
+      width: 126px;
+      height: 20px;
+      padding: 6px 16px;
+      border: solid 1px gray;
+      border-radius: 100px;
+      .editBtn--text{
+        text-align: center;
+        font-size: 14px;
+        line-height: 20px;
+        color: gray;
+      }
     }
   }
-}
+
 
 .user__main{
   margin-left: 8px;
