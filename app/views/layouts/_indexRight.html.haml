@@ -4,14 +4,14 @@
       %p.recomem--field おすすめユーザー
     - @recommends.each do |recommend|
       .recomendUsers--area
-        .recomendUsers--right
-          .recomendUsers__name--area
-            .recomendUsers__name
-              = recommend.name
-          .recomendUsers__followBTN--area
-            .recomendUsers__followBTN.followTrigger.recomendBTNHover{user: {id: current_user.id}, following: {id: recommend.id}} フォロー
-        .recomendUsers--left
-          = image_tag (recommend.avatar), class: "recomendUsers__iconPic--area"
+        .recomendUsers--left{following: {id: recommend.id}}
+          = link_to image_tag(recommend.avatar, {class: "recomendUsers__iconPic--area"}),user_path(recommend.id)
+          .recomendUsers--right
+            .recomendUsers__name--area
+              .recomendUsers__name
+                = link_to recommend.name,user_path(recommend.id)
+            .recomendUsers__followBTN--area
+              .recomendUsers__followBTN.followTrigger.recomendBTNHover{user: {id: current_user.id}, following: {id: recommend.id}} フォロー
   .index__right__import
   .index__right__terms
     %p.index__right__terms--top ©2017 Spitter Spitterについて
@@ -21,4 +21,3 @@
     %p.index__right__terms--top 広告掲載方法 開発者
   .index__right__ads
     %p.index__right__ads--top Twitter広告
-

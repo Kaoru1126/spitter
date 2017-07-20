@@ -10,5 +10,5 @@
           = tweet.created_at.strftime("%Y/%m/%d %H:%M:%S")
     .main__bottom
       = simple_format(tweet.content)
-      = image_tag tweet.image.thumb
+      = image_tag tweet.image, class: "imageInTweet" if tweet.image.present?
     .main__stats
