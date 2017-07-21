@@ -8,9 +8,13 @@
 .index
   .index-container
     = render 'layouts/indexLeft'
-    .user__main
+    .moment__main
       .moment__main--stream__box
-        = render 'layouts/mainTweet'
+        - if @user.tweets.present?
+          = render 'layouts/mainTweet'
+        - else
+          .moment__main--timeline__tweetbox__area
+            .moment__main--timeline__tweetbox.awesome #{@user.name}さんのツイートはまだありません。
       = paginate(@tweets)
       .page-load-status
         .infinite-scroll-request.loader-wheel
