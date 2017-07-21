@@ -5,7 +5,7 @@ class TweetsController < ApplicationController
   def search
     tweets = Tweet.where('content LIKE(?)', "%#{params[:keyword]}%")
     @numOfTweets = tweets.count
-    @tweets = tweets.order("created_at DESC").page(params[:page]).per(6)
+    @tweets = tweets.includes(:user).order("created_at DESC").page(params[:page]).per(6)
   end
 
   def new
@@ -39,11 +39,11 @@ class TweetsController < ApplicationController
   end
 
   def index
-    @tweets = Tweet.where("user_id IN(?)", @following_ids).order("created_at DESC").page(params[:page]).per(6)
+    @tweets = Tweet.includes(:user).where("user_id IN(?)", @following_ids).order("created_at DESC").page(params[:page]).per(6)
   end
 
   def moment
-    @tweets = Tweet.order("created_at DESC").page(params[:page]).per(6)
+    @tweets = Tweet.includes(:user).order("created_at DESC").page(params[:page]).per(6)
   end
 
   private
