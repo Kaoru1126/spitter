@@ -9,20 +9,27 @@
   .index-container
     = render 'layouts/indexLeft'
     .following__container
-      - @nameBox.each do |following|
-        .following__area
-          .following__cells
-            .following__cells__top
-            .following__cells__bottom
-              - if amIfollowing?(following)
-                .following__cells__bottom--btn.followBTNHover
-                  = link_to "フォロー中", relation_path(current_user.relations.find_by(following_id:following.id)), method: :delete
-              - else
-                .following__cells__bottom--btn.followTrigger2.followerFollowBTN{user: {id: current_user.id}, following: {id: following.id}} フォロー
-              = link_to following do
-                .following__cells__bottom--icon
-                  = image_tag following.avatar, class: "iconSmall"
-                .following__cells__bottom--name
-                  = following.name
-              .following__cells__bottom--intro
-                = simple_format(following.intro)
+      - if @nameBox.present?
+        - @nameBox.each do |following|
+          .following__area
+            .following__cells
+              .following__cells__top
+              .following__cells__bottom
+                - if amIfollowing?(following)
+                  .following__cells__bottom--btn.followBTNHover
+                    = link_to "フォロー中", relation_path(current_user.relations.find_by(following_id:following.id)), method: :delete
+                - else
+                  .following__cells__bottom--btn.followTrigger2.followerFollowBTN{user: {id: current_user.id}, following: {id: following.id}} フォロー
+                = link_to following do
+                  .following__cells__bottom--icon
+                    = image_tag following.avatar, class: "iconSmall"
+                  .following__cells__bottom--name
+                    = following.name
+                .following__cells__bottom--intro
+                  = simple_format(following.intro)
+      - else @nameBox.present?
+        .moment__main--timeline__tweetbox__area
+          .moment__main--timeline__tweetbox.awesome
+            #{@user.name} さんは
+            %br/
+            誰もフォローされていません。
