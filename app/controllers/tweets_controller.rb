@@ -1,5 +1,6 @@
 class TweetsController < ApplicationController
   before_action :set_user, only: [:index, :crete, :caution, :checked, :search, :moment]
+  before_action :user_stats, only: [:index, :crete, :caution, :checked, :search, :moment]
   before_action :checking_word, only: [:create]
 
   def search
@@ -52,6 +53,7 @@ class TweetsController < ApplicationController
     @user = current_user
     @tweet = current_user.id
 
+
     # indexとmomentの共通処理
     @followedUsers = Relation.where(user_id: current_user.id)
     @following_ids = []
@@ -64,6 +66,12 @@ class TweetsController < ApplicationController
 
   def tweet_params
     params.require(:tweet).permit(:content, :image).merge(user_id: current_user.id)
+  end
+
+  def user_stats
+     @numOfTweets = @user.tweets.count
+     @numOfFollows = @followedUsers.count
+     @numOfFollowers = @following_ids.count
   end
 
   def checking_word

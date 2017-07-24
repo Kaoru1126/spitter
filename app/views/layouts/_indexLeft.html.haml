@@ -6,8 +6,28 @@
         = link_to image_tag(@user.avatar, {:class=>"index__bio__box--iconBox"}),user_path(@user.id)
         .index__bio__box--name
           = link_to @user.name, user_path(@user)
-      .index__bio__box--stats
       .index__bio__box--intro
         = simple_format(@user.intro)
+      .index__bio__box--stats
+      .numOfTweet--area
+        = link_to user_path(@user.id) do
+          .numOfTweet__text--area.numOfTweet--text ツイート
+          .itsNumber
+            = @numOfTweets
+      .numOfTweet--area
+        = link_to following_user_path(@user.id) do
+          .numOfTweet__text--area.numOfTweet--text フォロー
+          .itsNumber
+            = @numOfFollows
+        .numOfTweet--text
+      .numOfTweet--area
+        = link_to follower_user_path(@user.id) do
+          .numOfTweet__text--area.numOfTweet--text フォロワ
+          .itsNumber
+            = @numOfFollowers
   .index__trends-box
-    %h3 トレンド
+    %h3 イメージボックス
+    .index__trends-container
+      - @imageTweets.each do |image|
+        = link_to image_tag(image.image, {:class => "trendsBox"}), user_path(image.user.id)
+
