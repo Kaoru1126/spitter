@@ -47,7 +47,6 @@ class CoverUploader < CarrierWave::Uploader::Base
   # end
 
   def default_url
-     "uc_4.jpg"
+      "uc_1.jpg"
   end
-
 end
