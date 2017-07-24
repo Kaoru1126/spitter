@@ -10,5 +10,8 @@ class User < ApplicationRecord
   has_many :relations
 
   mount_uploader :avatar, AvatarUploader
+  mount_uploader :cover, CoverUploader
+
+
 end
 
