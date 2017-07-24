@@ -11,7 +11,8 @@
 .largepic-area {
   width: 100vw;
   height: 175px;
-  background-color: $myGreen;
+  overflow: hidden;
+  background-size: contain;
 }
 
 .statsbar-area {
@@ -168,7 +169,6 @@
   width: 48px;
   height: 48px;
   display: inline-block;
-  background-image: image-url("pics/user.jpg");
 }
 
 .nameTime__box{
