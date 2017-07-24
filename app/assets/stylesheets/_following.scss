@@ -43,6 +43,13 @@ color: white;
   background-size: cover;
 }
 
+
+.cells_img{
+  width: 287px;
+  height: 90px;
+  object-fit: cover;
+}
+
 .following__cells__bottom{
       width: 257px;
       height: 163px;
@@ -88,6 +95,7 @@ word-break: break-all;
 width: 70px;
 height: 70px;
 border-radius: 50%;
+object-fit: cover;
 }
 
 

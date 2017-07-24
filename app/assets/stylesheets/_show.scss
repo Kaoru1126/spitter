@@ -15,6 +15,12 @@
   background-size: contain;
 }
 
+.largePic{
+  width: 100vw;
+  height: 175px;
+  object-fit: cover;
+}
+
 .statsbar-area {
   width: 100vw;
   height: 60px;

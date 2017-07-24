@@ -97,8 +97,7 @@ a{
   height: 60px;
   border: solid 1px;
   border-radius: 50%;
-  // margin-left: 20px;
-  // margin-top: 5px;
+  object-fit: cover;
 }
 
 // .iconBig{
@@ -261,6 +260,7 @@ p.tweetbox {
   height: 48px;
   border-radius: 50%;
   float: left;
+  object-fit: cover;
 }
 
 .index__right__import {
