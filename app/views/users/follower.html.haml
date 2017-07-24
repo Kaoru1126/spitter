@@ -2,6 +2,7 @@
   = render 'layouts/loggedInNavBar'
 .largepic-container
   .largepic-area
+    = image_tag @user.cover
   .statsbar-area
     .statsbar-area__container
       = render 'layouts/statsbar'
@@ -14,6 +15,7 @@
           .following__area
             .following__cells
               .following__cells__top
+                = image_tag following.cover
               .following__cells__bottom
                 - if amIfollowing?(following)
                   .following__cells__bottom--btn.followBTNHover

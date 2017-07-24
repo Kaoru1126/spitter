@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   end
 
   def configure_permitted_parameters_edit
-    devise_parameter_sanitizer.permit(:account_update, keys: [:intro, :avatar, :name])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:intro, :avatar, :name, :cover])
   end
 
   def request_path
@@ -21,4 +21,3 @@ class ApplicationController < ActionController::Base
   end
 
 end
-

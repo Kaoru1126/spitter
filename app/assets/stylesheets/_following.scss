@@ -39,7 +39,8 @@ color: white;
 .following__cells__top{
   width: 287px;
   height: 90px;
-  background-color: blue;
+  overflow: hidden;
+  background-size: cover;
 }
 
 .following__cells__bottom{

@@ -22,6 +22,11 @@
           = f.file_field :avatar, :class => "new__tweetImageBtn"
           %br/
         .field
+          = f.label :カバーピクチャ
+          %br/
+          = f.file_field :cover, :class => "new__tweetImageBtn"
+          %br/
+        .field
           = f.label :自己紹介
           %br/
           = f.text_area :intro

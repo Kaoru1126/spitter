@@ -9,9 +9,8 @@
 | password   | string      | null: false                            |
 | screenName | string      | null: false, unique: true, limit: 10   |
 | intro      | text        |                                        |
-| icon       | string      |                                        |
-| birthday   | string      |                                        |
-| place      | string      |                                        |
+| avatar     | string      |                                        |
+
 
 ### Association
 
@@ -35,10 +34,10 @@
 
 ## follows table
 
-| Column     | Type        | Options                        |
-|------------|-------------|--------------------------------|
-| user_id    | integer     | null: false, foreign_key: true |
-| group_id   | integer     | null: false, foreign_key: true |
+| Column       | Type        | Options                        |
+|--------------|-------------|--------------------------------|
+| user_id      | integer     | null: false, foreign_key: true |
+| following_id | integer     | null: false, foreign_key: true |
 
 ### Association
 

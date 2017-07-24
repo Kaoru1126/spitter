@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     @nameBox = []
     @followingsFromUser = User.where(id:followingIDs)
     @followingsFromUser.each do |userName|
-    @nameBox << userName
+      @nameBox << userName
     end
   end
 
@@ -40,6 +40,7 @@ class UsersController < ApplicationController
   end
 
 private
+
   def set_stats
     @user = User.find(params[:id])
     # ツイートカウント
@@ -59,4 +60,5 @@ private
       return 0
     end
   end
+
 end
