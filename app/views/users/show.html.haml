@@ -2,7 +2,7 @@
   = render 'layouts/loggedInNavBar'
 .largepic-container
   .largepic-area
-    = image_tag @user.cover
+    = image_tag @user.cover, class: "largePic"
   .statsbar-area
     .statsbar-area__container
       = render 'layouts/statsbar'
