@@ -79,6 +79,7 @@ a{
   min-height: 110px;
   background-color: white;
   padding: 15px;
+  border-radius: 5px;
 }
 
 .index__bio__box--intro{
@@ -99,11 +100,6 @@ a{
   object-fit: cover;
 }
 
-// .iconBig{
-//   width: 60px;
-//   height: 60px;
-// }
-
 .index__bio__box--name {
   font-size: 18px;
   font-weight: bold;
@@ -112,15 +108,15 @@ a{
 }
 
 
-// .index__bio__box--stats
 .index__trends-box {
   width: 258px;
-  height: 470px;
   padding: 15px;
   margin-bottom: 10px;
   border: solid 1px $indexBack;
   background-color: white;
+  border-radius: 5px;
 }
+
 
 
 .index__main {
@@ -177,6 +173,7 @@ p.tweetbox {
   margin-left: 9px;
   background-color: white;
   border-bottom: solid 1px $indexBack;
+  border-radius: 5px;
 }
 
 
@@ -269,6 +266,7 @@ p.tweetbox {
     margin-left: 9px;
     background-color: white;
     border-bottom: solid 1px $indexBack;
+    border-radius: 5px;
   }
 
 .index__right__terms--top {
@@ -284,6 +282,7 @@ p.tweetbox {
   margin-left: 9px;
   background-color: white;
   border-bottom: solid 1px $indexBack;
+  border-radius: 5px;
 
 }
 
@@ -294,6 +293,7 @@ p.tweetbox {
   margin-left: 9px;
   background-color: white;
   border-bottom: solid 1px $indexBack;
+  border-radius: 5px;
 }
 
 // infinite scroll animation(wheel)
@@ -328,8 +328,15 @@ p.tweetbox {
   transform-origin: center 0.5em;
 }
 
+.index__trends-container{
+}
 
-
+.trendsBox{
+  width: 115px;
+  height: 115px;
+  object-fit: cover;
+  margin: 5px;
+}  
 body{
     height: 100vh;
     display: flex;

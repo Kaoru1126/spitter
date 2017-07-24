@@ -13,18 +13,18 @@
     = link_to destroy_user_session_path, method: :delete do
       .logoutBtn
         %p.logoutBtn--text ログアウト
-  = link_to user_path(@user.id) do
-    .numOfTweet--area
+  .numOfTweet--area
+    = link_to user_path(@user.id) do
       .numOfTweet__text--area.numOfTweet--text ツイート
       .itsNumber
         = @myTweetCount
-  = link_to following_user_path do
-    .numOfTweet--area
+  .numOfTweet--area
+    = link_to following_user_path(@user.id) do
       .numOfTweet__text--area.numOfTweet--text フォロー
       .itsNumber.numOfTweet--text
         = @myFollowingsCount
-  = link_to follower_user_path do
-    .numOfTweet--area
+  .numOfTweet--area
+    = link_to follower_user_path do
       .numOfTweet__text--area.numOfTweet--text フォロワ
       .itsNumber
         = @myFollowersCount
