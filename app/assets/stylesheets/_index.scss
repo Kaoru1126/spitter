@@ -115,6 +115,8 @@ a{
   border: solid 1px $indexBack;
   background-color: white;
   border-radius: 5px;
+  text-align: center;
+  color: gray;
 }
 
 
@@ -337,7 +339,6 @@ p.tweetbox {
   object-fit: cover;
   margin: 5px;
   border-radius: 25%;
-  text-align: center
 }
 
 body{
