@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :configure_permitted_parameters_edit, if: :devise_controller?
   before_action :request_path
-  before_action :set_user_stats, except:[:new, :moment, :index, :create, :search]
+  before_action :set_user_stats, except:[:new, :moment, :index, :create, :search, :destroy, :edit, :update]
   before_action :imageBox
 
   def configure_permitted_parameters
@@ -32,7 +32,13 @@ class ApplicationController < ActionController::Base
 
     @numOfTweets = @user.tweets.count
     @numOfFollows = @followedUsers.count
-    @numOfFollowers = @following_ids.count
+
+    # フォロワーカウント
+    allFollowers = Relation.where(following_id: @user.id)
+    @myFollowersCount = allFollowers.count
+      if @myFollowersCount == nil
+      return 0
+      end
     end
   end
 
