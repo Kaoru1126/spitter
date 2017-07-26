@@ -11,15 +11,15 @@
       .index__bio__box--stats
       .numOfTweet--area
         = link_to user_path(@user.id) do
-          .numOfTweet__text--area.numOfTweet--text ツイート
+          .numOfTweet__text--area.numOfTweet--text 
+          ツイート
           .itsNumber
-            = @numOfTweets
+            = @myTweetCount
       .numOfTweet--area
         = link_to following_user_path(@user.id) do
           .numOfTweet__text--area.numOfTweet--text フォロー
           .itsNumber
-            = @numOfFollows
-        .numOfTweet--text
+            = @myFollowingsCount
       .numOfTweet--area
         = link_to follower_user_path(@user.id) do
           .numOfTweet__text--area.numOfTweet--text フォロワ
@@ -30,4 +30,3 @@
     .index__trends-container
       - @imageTweets.each do |image|
         = link_to image_tag(image.image, {:class => "trendsBox"}), user_path(image.user.id)
-
