@@ -2,6 +2,7 @@ class TweetsController < ApplicationController
   before_action :set_user, only: [:index, :crete, :caution, :checked, :search, :moment]
   before_action :user_stats, only: [:index, :crete, :caution, :checked, :search, :moment]
   before_action :checking_word, only: [:create]
+  before_action :set_stats, only: [:index, :crete, :caution, :checked, :search, :moment]
 
   def search
     tweets = Tweet.where('content LIKE(?)', "%#{params[:keyword]}%")
@@ -81,6 +82,26 @@ class TweetsController < ApplicationController
       if @tweet.content.include?(word) == true
         render :caution and return
       end
+    end
+  end
+
+  def set_stats
+    @user = current_user
+    # ツイートカウント
+    tweets = @user.tweets.order("created_at DESC")
+    @tweets = tweets.page(params[:page]).per(6)
+    @myTweetCount = tweets.count
+    # フォローカウント
+    @myFollowings = @user.relations
+    @myFollowingsCount = @myFollowings.count
+    if @myFollowingsCount == nil
+      return 0
+    end
+    # フォロワーカウント
+    allFollowers = Relation.where(following_id: @user.id)
+    @myFollowersCount = allFollowers.count
+    if @myFollowersCount == nil
+      return 0
     end
   end
 
